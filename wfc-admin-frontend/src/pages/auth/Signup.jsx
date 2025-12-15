@@ -16,7 +16,6 @@ const Signup = () => {
     password: '',
     confirmPassword: '',
   });
-
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [errors, setErrors] = useState({});
@@ -24,10 +23,7 @@ const Signup = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setFormData(prev => ({ ...prev, [name]: value }));
 
     if (name === 'password') {
       const validation = validatePassword(value);
@@ -35,21 +31,16 @@ const Signup = () => {
       setPasswordStrength({ score, message: validation.message });
     }
 
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
+    if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
   };
 
   const calculatePasswordScore = (password) => {
     let score = 0;
-    if (password.length >= 8) score += 1;
-    if (/[A-Z]/.test(password)) score += 1;
-    if (/[0-9]/.test(password)) score += 1;
-    if (/[^A-Za-z0-9]/.test(password)) score += 1;
-    if (password.length >= 12) score += 1;
+    if (password.length >= 8) score++;
+    if (/[A-Z]/.test(password)) score++;
+    if (/[0-9]/.test(password)) score++;
+    if (/[^A-Za-z0-9]/.test(password)) score++;
+    if (password.length >= 12) score++;
     return score;
   };
 
@@ -63,72 +54,36 @@ const Signup = () => {
 
   const validateForm = () => {
     const newErrors = {};
-
-    if (!formData.email) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address';
+    if (!formData.email) newErrors.email = 'Email is required';
+    else if (!/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Invalid email';
+    if (!formData.display_name) newErrors.display_name = 'Name is required';
+    else if (formData.display_name.length < 2) newErrors.display_name = 'Name must be at least 2 characters';
+    if (!formData.password) newErrors.password = 'Password is required';
+    else {
+      const validation = validatePassword(formData.password);
+      if (!validation.isValid) newErrors.password = validation.message;
     }
-
-    if (!formData.display_name) {
-      newErrors.display_name = 'Display name is required';
-    } else if (formData.display_name.length < 2) {
-      newErrors.display_name = 'Name must be at least 2 characters';
-    }
-
-    if (!formData.password) {
-      newErrors.password = 'Password is required';
-    } else {
-      const passwordValidation = validatePassword(formData.password);
-      if (!passwordValidation.isValid) {
-        newErrors.password = passwordValidation.message;
-      }
-    }
-
-    if (!formData.confirmPassword) {
-      newErrors.confirmPassword = 'Please confirm your password';
-    } else if (formData.password !== formData.confirmPassword) {
-      newErrors.confirmPassword = 'Passwords do not match';
-    }
-
+    if (!formData.confirmPassword) newErrors.confirmPassword = 'Confirm your password';
+    else if (formData.password !== formData.confirmPassword) newErrors.confirmPassword = 'Passwords do not match';
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
-
+    if (!validateForm()) return;
     const result = await signup({
       email: formData.email,
       display_name: formData.display_name,
       password: formData.password,
     });
-
-    if (result.success) {
-      navigate('/login');
-    }
+    if (result.success) navigate('/login');
   };
 
   const features = [
-    {
-      icon: Lock,
-      title: 'Secure by Default',
-      description: 'Your data is protected with enterprise-grade encryption',
-    },
-    {
-      icon: UserPlus,
-      title: 'Easy Setup',
-      description: 'Get up and running in less than 5 minutes',
-    },
-    {
-      icon: Check,
-      title: 'Full Control',
-      description: 'Manage your congregation with powerful admin tools',
-    },
+    { icon: Lock, title: 'Secure by Default', description: 'Enterprise-grade encryption protects your data' },
+    { icon: UserPlus, title: 'Easy Setup', description: 'Get up and running in less than 5 minutes' },
+    { icon: Check, title: 'Full Control', description: 'Manage your congregation with powerful tools' },
   ];
 
   return (
@@ -139,14 +94,14 @@ const Signup = () => {
         {/* Left Panel */}
         <div className="hidden lg:flex lg:w-1/2 xl:w-3/5 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 dark:from-gray-900 dark:via-blue-900 dark:to-indigo-900 relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl"></div>
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl" />
           </div>
 
           <div className="relative z-10 flex flex-col justify-between p-12 w-full">
             <div>
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-16 h-16 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/10 shadow-2xl">
+                <div className="w-16 h-16 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/10">
                   <Shield className="w-9 h-9 text-white" />
                 </div>
                 <div>
@@ -158,17 +113,17 @@ const Signup = () => {
               <h2 className="text-5xl font-bold text-white mb-6 leading-tight">
                 Create your admin account
               </h2>
-              <p className="text-xl text-blue-100 leading-relaxed">
+              <p className="text-xl text-blue-100">
                 Get started with church management in minutes.
               </p>
             </div>
 
             <div className="space-y-6">
-              {features.map((feature, index) => {
+              {features.map((feature, idx) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
-                    <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10">
+                    <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
                       <Icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -187,19 +142,15 @@ const Signup = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="flex-1 flex items-center justify-center p-6 sm:p-12 dark:bg-gray-900">
+        <div className="flex-1 flex items-center justify-center p-6 sm:p-12">
           <div className="w-full max-w-md">
             <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl border border-gray-200 dark:border-gray-700 p-8">
               <div className="mb-8">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-500/20 dark:to-indigo-500/20 rounded-2xl flex items-center justify-center mb-4">
                   <UserPlus className="w-7 h-7 text-blue-600 dark:text-blue-400" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                  Create Admin Account
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Enter your details to get started
-                </p>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Create Admin Account</h2>
+                <p className="text-gray-600 dark:text-gray-400">Enter your details to get started</p>
               </div>
 
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -216,13 +167,11 @@ const Signup = () => {
                     value={formData.email}
                     onChange={handleChange}
                     disabled={isLoading}
-                    className={`w-full px-4 py-3.5 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 transition-all focus:outline-none focus:ring-4 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 ${
-                      errors.email
-                        ? 'border-red-500 focus:ring-red-500/20'
-                        : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500/20'
+                    className={`w-full px-4 py-3.5 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 focus:outline-none focus:ring-4 text-gray-900 dark:text-white placeholder-gray-400 ${
+                      errors.email ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500/20'
                     }`}
                   />
-                  {errors.email && <p className="mt-2 text-sm text-red-500 dark:text-red-400">{errors.email}</p>}
+                  {errors.email && <p className="mt-2 text-sm text-red-500">{errors.email}</p>}
                 </div>
 
                 {/* Display Name */}
@@ -238,13 +187,11 @@ const Signup = () => {
                     value={formData.display_name}
                     onChange={handleChange}
                     disabled={isLoading}
-                    className={`w-full px-4 py-3.5 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 transition-all focus:outline-none focus:ring-4 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 ${
-                      errors.display_name
-                        ? 'border-red-500 focus:ring-red-500/20'
-                        : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500/20'
+                    className={`w-full px-4 py-3.5 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 focus:outline-none focus:ring-4 text-gray-900 dark:text-white placeholder-gray-400 ${
+                      errors.display_name ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500/20'
                     }`}
                   />
-                  {errors.display_name && <p className="mt-2 text-sm text-red-500 dark:text-red-400">{errors.display_name}</p>}
+                  {errors.display_name && <p className="mt-2 text-sm text-red-500">{errors.display_name}</p>}
                 </div>
 
                 {/* Password */}
@@ -261,32 +208,22 @@ const Signup = () => {
                       value={formData.password}
                       onChange={handleChange}
                       disabled={isLoading}
-                      className={`w-full px-4 py-3.5 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 transition-all focus:outline-none focus:ring-4 pr-12 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 ${
-                        errors.password
-                          ? 'border-red-500 focus:ring-red-500/20'
-                          : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500/20'
+                      className={`w-full px-4 py-3.5 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 focus:outline-none focus:ring-4 pr-12 text-gray-900 dark:text-white placeholder-gray-400 ${
+                        errors.password ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500/20'
                       }`}
                     />
-                    <button
-                      type="button"
-                      onClick={() => setShowPassword(!showPassword)}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-                    >
+                    <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
                       {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
                   </div>
                   
-                  {/* Password Strength */}
                   {formData.password && (
                     <div className="mt-3">
                       <div className="flex gap-1 mb-2">
                         {[...Array(5)].map((_, i) => (
-                          <div
-                            key={i}
-                            className={`h-1.5 flex-1 rounded-full transition-all ${
-                              i < passwordStrength.score ? getPasswordStrengthColor(passwordStrength.score) : 'bg-gray-200 dark:bg-gray-700'
-                            }`}
-                          />
+                          <div key={i} className={`h-1.5 flex-1 rounded-full transition-all ${
+                            i < passwordStrength.score ? getPasswordStrengthColor(passwordStrength.score) : 'bg-gray-200 dark:bg-gray-700'
+                          }`} />
                         ))}
                       </div>
                       <p className={`text-xs ${passwordStrength.score >= 4 ? 'text-green-500' : passwordStrength.score >= 3 ? 'text-yellow-500' : 'text-red-500'}`}>
@@ -294,7 +231,7 @@ const Signup = () => {
                       </p>
                     </div>
                   )}
-                  {errors.password && <p className="mt-2 text-sm text-red-500 dark:text-red-400">{errors.password}</p>}
+                  {errors.password && <p className="mt-2 text-sm text-red-500">{errors.password}</p>}
                 </div>
 
                 {/* Confirm Password */}
@@ -311,17 +248,11 @@ const Signup = () => {
                       value={formData.confirmPassword}
                       onChange={handleChange}
                       disabled={isLoading}
-                      className={`w-full px-4 py-3.5 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 transition-all focus:outline-none focus:ring-4 pr-12 text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 ${
-                        errors.confirmPassword
-                          ? 'border-red-500 focus:ring-red-500/20'
-                          : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500/20'
+                      className={`w-full px-4 py-3.5 bg-gray-50 dark:bg-gray-700 rounded-xl border-2 focus:outline-none focus:ring-4 pr-12 text-gray-900 dark:text-white placeholder-gray-400 ${
+                        errors.confirmPassword ? 'border-red-500 focus:ring-red-500/20' : 'border-gray-300 dark:border-gray-600 focus:border-blue-500 focus:ring-blue-500/20'
                       }`}
                     />
-                    <button
-                      type="button"
-                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                      className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
-                    >
+                    <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200">
                       {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
                     </button>
                   </div>
@@ -331,34 +262,31 @@ const Signup = () => {
                       Passwords match
                     </p>
                   )}
-                  {errors.confirmPassword && <p className="mt-2 text-sm text-red-500 dark:text-red-400">{errors.confirmPassword}</p>}
+                  {errors.confirmPassword && <p className="mt-2 text-sm text-red-500">{errors.confirmPassword}</p>}
                 </div>
 
                 {/* Submit */}
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-4 px-6 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-xl"
+                  className="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 text-white py-4 px-6 rounded-xl font-semibold text-lg hover:shadow-2xl hover:scale-[1.02] focus:outline-none focus:ring-4 focus:ring-blue-500/50 transition-all disabled:opacity-50 shadow-xl"
                 >
                   {isLoading ? (
                     <span className="flex items-center justify-center gap-2">
-                      <svg className="animate-spin h-5 w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      <svg className="animate-spin h-5 w-5" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                       </svg>
                       Creating Account...
                     </span>
-                  ) : (
-                    'Create Account'
-                  )}
+                  ) : 'Create Account'}
                 </button>
               </form>
 
-              {/* Login Link */}
               <div className="mt-6 text-center">
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Already have an account?{' '}
-                  <Link to="/login" className="text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                  <Link to="/login" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
                     Sign in here
                   </Link>
                 </p>

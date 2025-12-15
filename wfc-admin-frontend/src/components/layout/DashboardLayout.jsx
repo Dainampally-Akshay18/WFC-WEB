@@ -33,7 +33,7 @@ const DashboardLayout = ({ children, activeSection = 'dashboard', onSectionChang
         onClose={handleCloseSidebar}
       />
 
-      {/* Main Content */}
+      {/* Main Content Area */}
       <main className="lg:ml-64 pt-16 min-h-screen">
         {children}
       </main>

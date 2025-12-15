@@ -30,9 +30,12 @@ const Sidebar = ({ isOpen, activeSection, onSectionChange, onClose }) => {
 
   return (
     <>
-      <aside className={`fixed top-16 left-0 bottom-0 w-64 z-40 transition-transform duration-300 ${
-        isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
-      } bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800`}>
+      {/* Sidebar */}
+      <aside
+        className={`fixed top-16 left-0 bottom-0 w-64 z-40 transition-transform duration-300 bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 ${
+          isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+        }`}
+      >
         <div className="h-full overflow-y-auto py-6">
           <nav className="px-3 space-y-1">
             {navigationItems.map((item) => {
@@ -59,8 +62,13 @@ const Sidebar = ({ isOpen, activeSection, onSectionChange, onClose }) => {
         </div>
       </aside>
 
+      {/* Mobile Overlay */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black/50 z-30 lg:hidden top-16" onClick={onClose} />
+        <div
+          className="fixed inset-0 bg-black/50 z-30 lg:hidden top-16"
+          onClick={onClose}
+          aria-hidden="true"
+        />
       )}
     </>
   );
