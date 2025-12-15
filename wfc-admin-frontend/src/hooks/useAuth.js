@@ -10,6 +10,7 @@ export const useAuth = () => {
     isAuthenticated,
     isLoading,
     error,
+    signup,        // ← ADDED THIS
     login,
     logout,
     initialize,
@@ -21,6 +22,7 @@ export const useAuth = () => {
     isAuthenticated,
     isLoading,
     error,
+    signup,        // ← ADDED THIS
     login,
     logout,
     initialize,

@@ -7,6 +7,20 @@ import { storage } from '@utils/storage';
  */
 export const authService = {
   /**
+   * Admin signup/create account
+   * @param {Object} signupData - Email, password, and display_name
+   * @returns {Promise<Object>} Created admin data
+   */
+  async signup(signupData) {
+    try {
+      const response = await api.post(API_ENDPOINTS.ADMIN_CREATE, signupData);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  },
+
+  /**
    * Admin login
    * @param {Object} credentials - Email and password
    * @returns {Promise<Object>} Auth tokens and user data
@@ -53,6 +67,20 @@ export const authService = {
   async getCurrentUser() {
     try {
       const response = await api.get(API_ENDPOINTS.ADMIN_ME);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  },
+
+  /**
+   * Change admin password
+   * @param {Object} passwordData - New password
+   * @returns {Promise<Object>} Success response
+   */
+  async changePassword(passwordData) {
+    try {
+      const response = await api.put(API_ENDPOINTS.ADMIN_CHANGE_PASSWORD, passwordData);
       return response.data;
     } catch (error) {
       throw error;

@@ -13,9 +13,11 @@ export const STORAGE_KEYS = {
 // API Endpoints
 export const API_ENDPOINTS = {
   // Auth
+  ADMIN_CREATE: '/admin/create',        // NEW: Admin signup
   ADMIN_LOGIN: '/admin/login',
   ADMIN_LOGOUT: '/admin/logout',
   ADMIN_ME: '/admin/me',
+  ADMIN_CHANGE_PASSWORD: '/admin/password',
   
   // Users
   USERS: '/users',
@@ -37,12 +39,14 @@ export const API_ENDPOINTS = {
   
   // Events
   EVENTS: '/events',
+  EVENTS_PENDING_CROSS_BRANCH: '/events/admin/pending-cross-branch',
   
   // Prayers
   PRAYERS: '/prayers',
   
   // Notifications
   NOTIFICATIONS: '/notifications',
+  NOTIFICATIONS_UNREAD_COUNT: '/notifications/unread-count',
 };
 
 // Pagination
@@ -71,4 +75,13 @@ export const EVENT_CROSS_BRANCH_STATUS = {
   PENDING: 'pending',
   APPROVED: 'approved',
   REJECTED: 'rejected',
+};
+
+// Password Validation Rules
+export const PASSWORD_RULES = {
+  MIN_LENGTH: 8,
+  REQUIRE_UPPERCASE: true,
+  REQUIRE_LOWERCASE: true,
+  REQUIRE_NUMBER: true,
+  REQUIRE_SPECIAL: true,
 };

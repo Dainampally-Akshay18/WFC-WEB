@@ -13,6 +13,36 @@ export const useAuthStore = create((set, get) => ({
   error: null,
 
   /**
+   * Signup action
+   * @param {Object} signupData - Email, password, display_name
+   */
+  signup: async (signupData) => {
+    set({ isLoading: true, error: null });
+    
+    try {
+      const admin = await authService.signup(signupData);
+      
+      set({
+        isLoading: false,
+        error: null,
+      });
+
+      toast.success('Admin account created successfully! Please login.');
+      return { success: true, admin };
+    } catch (error) {
+      const errorMessage = error.response?.data?.detail || 'Signup failed';
+      
+      set({
+        isLoading: false,
+        error: errorMessage,
+      });
+
+      toast.error(errorMessage);
+      return { success: false, error: errorMessage };
+    }
+  },
+
+  /**
    * Login action
    * @param {Object} credentials - Email and password
    */
