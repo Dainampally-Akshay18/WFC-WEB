@@ -1,11 +1,12 @@
 
 # FastAPI Framework (Stable Windows versions)
-fastapi==0.104.1
-uvicorn==0.24.0
-pydantic==2.4.2
-pydantic-settings==2.0.3
+fastapi
+uvicorn
+pydantic==2.7.1
+pydantic-core==2.18.2
+setuptools
+wheel
 
-gunicorn
 
 # Database
 sqlalchemy==2.0.23
