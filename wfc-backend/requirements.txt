@@ -5,6 +5,8 @@ uvicorn==0.24.0
 pydantic==2.4.2
 pydantic-settings==2.0.3
 
+gunicorn
+
 # Database
 sqlalchemy==2.0.23
 psycopg2-binary
@@ -29,4 +31,3 @@ email-validator==2.1.0.post1
 slowapi==0.1.9
 aiofiles==23.2.1
 
-gunicorn
