@@ -1,6 +1,7 @@
 import { 
   LayoutDashboard, 
   Users, 
+  Clock,
   Video, 
   BookOpen, 
   Calendar, 
@@ -9,22 +10,27 @@ import {
   Settings, 
   ChevronRight
 } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-const Sidebar = ({ isOpen, activeSection, onSectionChange, onClose }) => {
+const Sidebar = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const navigationItems = [
-    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard },
-    { id: 'users', label: 'User Management', icon: Users },
-    { id: 'sermons', label: 'Sermons', icon: Video },
-    { id: 'blogs', label: "Pastor's Pen", icon: BookOpen },
-    { id: 'events', label: 'Events', icon: Calendar },
-    { id: 'prayers', label: 'Prayer Requests', icon: Heart },
-    { id: 'notifications', label: 'Notifications', icon: Bell },
-    { id: 'settings', label: 'Settings', icon: Settings },
+    { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
+    { id: 'users', label: 'User Management', icon: Users, path: '/users' },
+    { id: 'pending', label: 'Pending Approvals', icon: Clock, path: '/users/pending' },
+    { id: 'sermons', label: 'Sermons', icon: Video, path: '/sermons' },
+    { id: 'blogs', label: "Pastor's Pen", icon: BookOpen, path: '/blogs' },
+    { id: 'events', label: 'Events', icon: Calendar, path: '/events' },
+    { id: 'prayers', label: 'Prayer Requests', icon: Heart, path: '/prayers' },
+    { id: 'notifications', label: 'Notifications', icon: Bell, path: '/notifications' },
+    { id: 'settings', label: 'Settings', icon: Settings, path: '/settings' },
   ];
 
-  const handleItemClick = (itemId) => {
-    onSectionChange(itemId);
+  const handleItemClick = (path) => {
+    navigate(path);
     onClose();
   };
 
@@ -40,12 +46,12 @@ const Sidebar = ({ isOpen, activeSection, onSectionChange, onClose }) => {
           <nav className="px-3 space-y-1">
             {navigationItems.map((item) => {
               const Icon = item.icon;
-              const isActive = activeSection === item.id;
+              const isActive = location.pathname === item.path;
 
               return (
                 <button
                   key={item.id}
-                  onClick={() => handleItemClick(item.id)}
+                  onClick={() => handleItemClick(item.path)}
                   className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all ${
                     isActive
                       ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/30'
@@ -76,8 +82,6 @@ const Sidebar = ({ isOpen, activeSection, onSectionChange, onClose }) => {
 
 Sidebar.propTypes = {
   isOpen: PropTypes.bool.isRequired,
-  activeSection: PropTypes.string.isRequired,
-  onSectionChange: PropTypes.func.isRequired,
   onClose: PropTypes.func.isRequired,
 };
 
