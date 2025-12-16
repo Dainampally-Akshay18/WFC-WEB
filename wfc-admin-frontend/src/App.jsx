@@ -14,6 +14,7 @@ import PendingApprovals from '@pages/users/PendingApprovals';
 
 // Components
 import ProtectedRoute from '@components/common/ProtectedRoute';
+import NotFound from './pages/Not-Found/NotFound';
 
 // Create React Query client
 const queryClient = new QueryClient({
@@ -89,13 +90,7 @@ function App() {
           {/* 404 */}
           <Route
             path="*"
-            element={
-              <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-900">
-                <div className="text-center">
-                  <h1 className="text-6xl font-bold text-blue-600 dark:text-blue-400 mb-4">404</h1>
-                  <p className="text-gray-600 dark:text-gray-400 text-lg">Page not found</p>
-                </div>
-              </div>
+            element={<NotFound/>
             }
           />
         </Routes>
