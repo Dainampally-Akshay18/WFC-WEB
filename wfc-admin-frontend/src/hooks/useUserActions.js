@@ -6,60 +6,71 @@ export const useUserActions = () => {
   const queryClient = useQueryClient();
 
   const approveUser = useMutation({
-    mutationFn: userService.approveUser,
-    onSuccess: (data, userId) => {
+    mutationFn: (userId) => userService.approveUser(userId),
+    onSuccess: () => {
       queryClient.invalidateQueries(['users']);
       queryClient.invalidateQueries(['pendingUsers']);
       toast.success('User approved successfully!');
     },
     onError: (error) => {
+      console.error('Approve error:', error);
       toast.error(error.response?.data?.message || 'Failed to approve user');
     },
   });
 
   const rejectUser = useMutation({
-    mutationFn: ({ userId, reason }) => userService.rejectUser(userId, reason),
+    mutationFn: (userId) => userService.rejectUser(userId),
     onSuccess: () => {
       queryClient.invalidateQueries(['users']);
       queryClient.invalidateQueries(['pendingUsers']);
       toast.success('User rejected successfully!');
     },
     onError: (error) => {
+      console.error('Reject error:', error);
       toast.error(error.response?.data?.message || 'Failed to reject user');
     },
   });
 
   const revokeUser = useMutation({
-    mutationFn: ({ userId, reason }) => userService.revokeUser(userId, reason),
+    mutationFn: (userId) => userService.revokeUser(userId),
     onSuccess: () => {
       queryClient.invalidateQueries(['users']);
       toast.success('User access revoked successfully!');
     },
     onError: (error) => {
+      console.error('Revoke error:', error);
       toast.error(error.response?.data?.message || 'Failed to revoke user access');
     },
   });
 
   const bulkApprove = useMutation({
-    mutationFn: userService.bulkApprove,
+    mutationFn: (userIds) => {
+      console.log('bulkApprove mutation - userIds:', userIds); // Debug
+      return userService.bulkApprove(userIds);
+    },
     onSuccess: (data) => {
       queryClient.invalidateQueries(['users']);
       queryClient.invalidateQueries(['pendingUsers']);
-      toast.success(`${data.approved_count} users approved successfully!`);
+      toast.success(`${data.approved_count || 'Multiple'} user(s) approved successfully!`);
     },
     onError: (error) => {
+      console.error('Bulk approve error:', error);
       toast.error(error.response?.data?.message || 'Failed to approve users');
     },
   });
 
   const bulkReject = useMutation({
-    mutationFn: ({ userIds, reason }) => userService.bulkReject(userIds, reason),
+    mutationFn: (userIds) => {
+      console.log('bulkReject mutation - userIds:', userIds); // Debug
+      return userService.bulkReject(userIds);
+    },
     onSuccess: (data) => {
       queryClient.invalidateQueries(['users']);
       queryClient.invalidateQueries(['pendingUsers']);
-      toast.success(`${data.rejected_count} users rejected successfully!`);
+      toast.success(`${data.rejected_count || 'Multiple'} user(s) rejected successfully!`);
     },
     onError: (error) => {
+      console.error('Bulk reject error:', error);
       toast.error(error.response?.data?.message || 'Failed to reject users');
     },
   });

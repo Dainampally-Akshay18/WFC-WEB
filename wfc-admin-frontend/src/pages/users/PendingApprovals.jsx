@@ -86,33 +86,39 @@ const PendingApprovals = () => {
   };
 
   const confirmAction = async () => {
-    const { type, userId } = confirmDialog;
+  const { type, userId } = confirmDialog;
 
-    try {
-      switch (type) {
-        case 'approve':
-          await approveUser.mutateAsync(userId);
-          break;
-        case 'reject':
-          await rejectUser.mutateAsync({ userId, reason: '' });
-          break;
-        case 'bulkApprove':
-          await bulkApprove.mutateAsync(selectedUsers);
-          setSelectedUsers([]);
-          break;
-        case 'bulkReject':
-          await bulkReject.mutateAsync({ userIds: selectedUsers, reason: '' });
-          setSelectedUsers([]);
-          break;
-        default:
-          break;
-      }
-    } catch (error) {
-      console.error('Action failed:', error);
-    } finally {
-      setConfirmDialog({ isOpen: false, type: null, userId: null });
+  try {
+    switch (type) {
+      case 'approve':
+        console.log('Approving single user:', userId);
+        await approveUser.mutateAsync(userId);
+        break;
+      case 'reject':
+        console.log('Rejecting single user:', userId);
+        await rejectUser.mutateAsync(userId);
+        break;
+      case 'bulkApprove':
+        console.log('Bulk approving users:', selectedUsers);
+        await bulkApprove.mutateAsync(selectedUsers);
+        setSelectedUsers([]);
+        break;
+      case 'bulkReject':
+        console.log('Bulk rejecting users:', selectedUsers);
+        await bulkReject.mutateAsync(selectedUsers);
+        setSelectedUsers([]);
+        break;
+      default:
+        break;
     }
-  };
+  } catch (error) {
+    console.error('Action failed:', error);
+  } finally {
+    setConfirmDialog({ isOpen: false, type: null, userId: null });
+  }
+};
+
+
 
   const handleRefresh = () => {
     refetch();
@@ -264,9 +270,9 @@ const PendingApprovals = () => {
                                 📱 {user.phone}
                               </span>
                             )}
-                            {user.branch && (
+                            {user.branch_name && (
                               <span className="px-2 py-0.5 bg-gray-100 dark:bg-gray-700 rounded text-xs font-medium capitalize">
-                                {user.branch}
+                                {user.branch_name}
                               </span>
                             )}
                             <span className="flex items-center gap-1">

@@ -16,6 +16,15 @@ const userService = {
     });
 
     const response = await api.get(`/users?${queryParams}`);
+    
+    // Map full_name to display_name for frontend consistency
+    if (response.data?.users) {
+      response.data.users = response.data.users.map(user => ({
+        ...user,
+        display_name: user.full_name || user.display_name || 'Unknown User'
+      }));
+    }
+    
     return response.data;
   },
 
@@ -23,13 +32,27 @@ const userService = {
   getPendingUsers: async (params = {}) => {
     const { page = 1, limit = 10 } = params;
     const response = await api.get(`/users/pending?page=${page}&limit=${limit}`);
+    
+    // Map full_name to display_name
+    if (response.data?.users) {
+      response.data.users = response.data.users.map(user => ({
+        ...user,
+        display_name: user.full_name || user.display_name || 'Unknown User'
+      }));
+    }
+    
     return response.data;
   },
 
   // Get single user details
   getUserById: async (userId) => {
     const response = await api.get(`/users/${userId}`);
-    return response.data;
+    
+    // Map full_name to display_name
+    return {
+      ...response.data,
+      display_name: response.data.full_name || response.data.display_name || 'Unknown User'
+    };
   },
 
   // Approve user
@@ -39,26 +62,32 @@ const userService = {
   },
 
   // Reject user
-  rejectUser: async (userId, reason = '') => {
-    const response = await api.post(`/users/${userId}/reject`, { reason });
+  rejectUser: async (userId) => {
+    const response = await api.post(`/users/${userId}/reject`);
     return response.data;
   },
 
   // Revoke user access
-  revokeUser: async (userId, reason = '') => {
-    const response = await api.post(`/users/${userId}/revoke`, { reason });
+  revokeUser: async (userId) => {
+    const response = await api.post(`/users/${userId}/revoke`);
     return response.data;
   },
 
-  // Bulk approve users
+  // Bulk approve users - FIXED: Send array directly
   bulkApprove: async (userIds) => {
-    const response = await api.post('/users/bulk-approve', { user_ids: userIds });
+    console.log('✅ Bulk Approve - Sending userIds:', userIds);
+    const response = await api.post('/users/bulk-approve', { 
+      user_ids: userIds  // ✅ Direct array, not nested object
+    });
     return response.data;
   },
 
-  // Bulk reject users
-  bulkReject: async (userIds, reason = '') => {
-    const response = await api.post('/users/bulk-reject', { user_ids: userIds, reason });
+  // Bulk reject users - FIXED: Send array directly
+  bulkReject: async (userIds) => {
+    console.log('❌ Bulk Reject - Sending userIds:', userIds);
+    const response = await api.post('/users/bulk-reject', { 
+      user_ids: userIds  // ✅ Direct array, not nested object
+    });
     return response.data;
   },
 
