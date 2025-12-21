@@ -21,7 +21,7 @@ const Sidebar = ({ isOpen, onClose }) => {
     { id: 'dashboard', label: 'Dashboard', icon: LayoutDashboard, path: '/dashboard' },
     { id: 'users', label: 'User Management', icon: Users, path: '/users' },
     { id: 'pending', label: 'Pending Approvals', icon: Clock, path: '/users/pending' },
-    { id: 'sermons', label: 'Sermons', icon: Video, path: '/sermons' },
+    { id: 'sermons', label: 'Sermons', icon: Video, path: '/sermon-categories' },
     { id: 'blogs', label: "Pastor's Pen", icon: BookOpen, path: '/blogs' },
     { id: 'events', label: 'Events', icon: Calendar, path: '/events' },
     { id: 'prayers', label: 'Prayer Requests', icon: Heart, path: '/prayers' },

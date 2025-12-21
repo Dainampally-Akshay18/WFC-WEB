@@ -1,7 +1,14 @@
+// src/App.jsx
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
 import { useAuth } from '@hooks/useAuth';
 import { useTheme } from '@hooks/useTheme';
 
@@ -11,6 +18,11 @@ import Signup from '@pages/auth/Signup';
 import Dashboard from '@pages/dashboard/Dashboard';
 import UserManagement from '@pages/users/UserManagement';
 import PendingApprovals from '@pages/users/PendingApprovals';
+
+// NEW sermon pages
+import SermonCategoriesPage from '@pages/sermons/SermonCategoriesPage';
+import SermonsPage from '@pages/sermons/SermonsPage';
+import SermonPlayerPage from '@pages/sermons/SermonPlayerPage';
 
 // Components
 import ProtectedRoute from '@components/common/ProtectedRoute';
@@ -49,13 +61,25 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* Auth Routes */}
-          <Route 
-            path="/login" 
-            element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Login />} 
+          <Route
+            path="/login"
+            element={
+              isAuthenticated ? (
+                <Navigate to="/dashboard" replace />
+              ) : (
+                <Login />
+              )
+            }
           />
-          <Route 
-            path="/signup" 
-            element={isAuthenticated ? <Navigate to="/dashboard" replace /> : <Signup />} 
+          <Route
+            path="/signup"
+            element={
+              isAuthenticated ? (
+                <Navigate to="/dashboard" replace />
+              ) : (
+                <Signup />
+              )
+            }
           />
 
           {/* Protected Routes */}
@@ -84,25 +108,58 @@ function App() {
             }
           />
 
-          {/* Redirects */}
-          <Route path="/" element={<Navigate to={isAuthenticated ? "/dashboard" : "/login"} replace />} />
-          
-          {/* 404 */}
+          {/* NEW Sermon feature routes */}
           <Route
-            path="*"
-            element={<NotFound/>
+            path="/sermon-categories"
+            element={
+              <ProtectedRoute>
+                <SermonCategoriesPage />
+              </ProtectedRoute>
             }
           />
+          <Route
+            path="/sermon-categories/:categoryId/sermons"
+            element={
+              <ProtectedRoute>
+                <SermonsPage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/sermons/:sermonId/watch"
+            element={
+              <ProtectedRoute>
+                <SermonPlayerPage />
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Redirects */}
+          <Route
+            path="/"
+            element={
+              <Navigate
+                to={isAuthenticated ? '/dashboard' : '/login'}
+                replace
+              />
+            }
+          />
+
+          {/* 404 */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
 
-        <Toaster 
+        <Toaster
           position="top-right"
           toastOptions={{
             duration: 3000,
             style: {
               background: theme === 'dark' ? '#1f2937' : '#ffffff',
               color: theme === 'dark' ? '#ffffff' : '#000000',
-              border: theme === 'dark' ? '1px solid #374151' : '1px solid #e5e7eb',
+              border:
+                theme === 'dark'
+                  ? '1px solid #374151'
+                  : '1px solid #e5e7eb',
             },
             success: {
               iconTheme: {
