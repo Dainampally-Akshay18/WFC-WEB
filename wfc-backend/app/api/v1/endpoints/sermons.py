@@ -66,48 +66,42 @@ async def create_sermon(
     return new_sermon
 
 
+# app/api/v1/endpoints/sermons.py
+
 @router.get("", response_model=List[SermonWithStats])
 async def get_all_sermons(
     category_id: Optional[str] = None,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    current_admin = Depends(get_current_admin),  # CHANGED
 ):
     """
-    Get all sermons with view statistics
+    Get all sermons with view statistics (Admin only)
     """
     query = db.query(Sermon)
-    
     if category_id:
         query = query.filter(Sermon.category_id == category_id)
-    
+
     sermons = query.order_by(Sermon.created_at.desc()).all()
-    
     result = []
+
     for sermon in sermons:
-        # Get view stats
         total_views = db.query(SermonView).filter(
             SermonView.sermon_id == sermon.id
         ).count()
-        
         total_likes = db.query(SermonView).filter(
             SermonView.sermon_id == sermon.id,
-            SermonView.liked == True
+            SermonView.liked == True,
         ).count()
-        
-        # Check if current user viewed/liked
-        user_view = db.query(SermonView).filter(
-            SermonView.sermon_id == sermon.id,
-            SermonView.user_id == current_user.id
-        ).first()
-        
+
+        # Admin does not need per-user flags; set them to False
         sermon_dict = SermonWithStats.from_orm(sermon).dict()
-        sermon_dict['total_views'] = total_views
-        sermon_dict['total_likes'] = total_likes
-        sermon_dict['user_has_viewed'] = user_view is not None
-        sermon_dict['user_has_liked'] = user_view.liked if user_view else False
-        
+        sermon_dict["total_views"] = total_views
+        sermon_dict["total_likes"] = total_likes
+        sermon_dict["user_has_viewed"] = False
+        sermon_dict["user_has_liked"] = False
+
         result.append(sermon_dict)
-    
+
     return result
 
 

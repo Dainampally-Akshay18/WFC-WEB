@@ -14,7 +14,7 @@ import api from '@services/api';
  * api.js baseURL = /api/v1, so we use `/sermon-categories` here.[file:6]
  */
 
-const BASE_PATH = '/sermon-categories';
+const BASE_PATH = 'sermon-categories';
 
 const SermonCategoryService = {
   // List all categories (user or admin)
