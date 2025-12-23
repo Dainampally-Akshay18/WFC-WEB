@@ -1,6 +1,6 @@
 # app/api/v1/endpoints/sermons.py
 
-from fastapi import APIRouter, Depends, status
+from fastapi import APIRouter, Depends, status,Form, File, UploadFile
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
 from sqlalchemy.orm import Session
@@ -24,6 +24,7 @@ from app.models.sermon_view import SermonView
 from app.models.sermon_category import SermonCategory
 from app.models.user import User
 from app.api.deps import get_current_admin, get_current_user
+from app.services.vimeo import upload_video_to_vimeo
 
 router = APIRouter()
 
@@ -384,3 +385,53 @@ async def get_sermon_analytics(
         ],
         "not_watched_by": not_watched,
     }
+@router.post(
+    "/upload",
+    response_model=SermonResponse,
+    status_code=status.HTTP_201_CREATED,
+)
+async def upload_sermon_video(
+    title: str = Form(...),
+    description: str = Form(""),
+    category_id: str = Form(...),
+    video_file: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    current_admin = Depends(get_current_admin),
+):
+    """
+    Upload a sermon video, push to Vimeo, store metadata (Admin only).
+    """
+    # Validate category
+    category = db.query(SermonCategory).filter(
+        SermonCategory.id == category_id
+    ).first()
+    if not category:
+        raise ValidationError("Invalid category ID")
+
+    # Upload to Vimeo and get metadata
+    vimeo_meta = await upload_video_to_vimeo(video_file, title, description)
+    # Expected shape:
+    # {
+    #   "video_id": "...",
+    #   "embed_url": "...",
+    #   "thumbnail_url": "...",
+    #   "duration": 123
+    # }
+
+    # Create sermon record
+    new_sermon = Sermon(
+        title=title,
+        description=description,
+        category_id=category_id,
+        video_id=vimeo_meta["video_id"],
+        embed_url=vimeo_meta["embed_url"],
+        thumbnail_url=vimeo_meta["thumbnail_url"],
+        duration=vimeo_meta["duration"],
+        uploaded_by=current_admin.id,
+    )
+
+    db.add(new_sermon)
+    db.commit()
+    db.refresh(new_sermon)
+
+    return new_sermon

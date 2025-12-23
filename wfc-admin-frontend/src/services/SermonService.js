@@ -15,7 +15,10 @@ const SermonService = {
   getById: (sermonId) => api.get(`/sermons/${sermonId}`),
 
   // Create sermon (admin only)
-  create: (payload) => api.post('/sermons', payload),
+  create: (formData) =>
+    api.post('/sermons/upload', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' },
+    }),
 
   // Update sermon (admin only)
   update: (sermonId, payload) => api.put(`/sermons/${sermonId}`, payload),
