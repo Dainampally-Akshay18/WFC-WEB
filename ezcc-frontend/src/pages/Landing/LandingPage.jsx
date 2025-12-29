@@ -12,13 +12,13 @@ import {
   Play,
   ArrowRight,
   Church,
-  Sparkles
+  Sparkles,
+  Quote
 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const [activeSermon, setActiveSermon] = useState(0);
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll();
   
@@ -26,73 +26,88 @@ const LandingPage = () => {
   const heroY = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
   const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.3]);
 
-  // Sermons data
-  const sermons = [
+  // Bible verses data - inspiring verses for faith, hope, and love
+  const bibleVerses = [
     {
       id: 1,
-      title: "Walking in Faith",
-      speaker: "Pastor John Smith",
-      date: "December 24, 2025",
-      duration: "45 min",
-      image: "https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=800&q=80",
-      description: "Discover the power of unwavering faith in challenging times"
+      verse: "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.",
+      reference: "Jeremiah 29:11",
+      theme: "Hope",
+      gradient: "from-amber-500 to-orange-500",
+      bgColor: "from-amber-500/20 to-orange-500/20"
     },
     {
       id: 2,
-      title: "Love Without Boundaries",
-      speaker: "Pastor Sarah Johnson",
-      date: "December 17, 2025",
-      duration: "38 min",
-      image: "https://images.unsplash.com/photo-1507692049790-de58290a4334?w=800&q=80",
-      description: "Embracing God's unconditional love and sharing it with others"
+      verse: "Be strong and courageous. Do not be afraid or terrified because of them, for the LORD your God goes with you; he will never leave you nor forsake you.",
+      reference: "Deuteronomy 31:6",
+      theme: "Courage",
+      gradient: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-500/20 to-cyan-500/20"
     },
     {
       id: 3,
-      title: "The Power of Prayer",
-      speaker: "Pastor Michael Brown",
-      date: "December 10, 2025",
-      duration: "42 min",
-      image: "https://images.unsplash.com/photo-1445546137150-c89a2288ed46?w=800&q=80",
-      description: "Understanding prayer as a conversation with our Creator"
+      verse: "The Lord is my light and my salvation—whom shall I fear? The Lord is the stronghold of my life—of whom shall I be afraid?",
+      reference: "Psalm 27:1",
+      theme: "Faith",
+      gradient: "from-purple-500 to-pink-500",
+      bgColor: "from-purple-500/20 to-pink-500/20"
+    },
+    {
+      id: 4,
+      verse: "Come to Me, all you who labor and are heavy laden, and I will give you rest.",
+      reference: "Matthew 11:28",
+      theme: "Peace",
+      gradient: "from-green-500 to-emerald-500",
+      bgColor: "from-green-500/20 to-emerald-500/20"
+    },
+    {
+      id: 5,
+      verse: "For we walk by faith, not by sight.",
+      reference: "2 Corinthians 5:7",
+      theme: "Trust",
+      gradient: "from-indigo-500 to-violet-500",
+      bgColor: "from-indigo-500/20 to-violet-500/20"
+    },
+    {
+      id: 6,
+      verse: "Love does not delight in evil but rejoices with the truth. It always protects, always trusts, always hopes, always perseveres.",
+      reference: "1 Corinthians 13:6-7",
+      theme: "Love",
+      gradient: "from-rose-500 to-red-500",
+      bgColor: "from-rose-500/20 to-red-500/20"
     }
   ];
 
-  // Events data
-  const upcomingEvents = [
+  // Additional inspiring verses
+  const featuredVerses = [
     {
       id: 1,
-      title: "New Year's Eve Service",
-      date: "December 31, 2025",
-      time: "10:00 PM",
-      location: "Main Sanctuary",
-      icon: Calendar,
-      color: "from-amber-500/20 to-orange-500/20"
+      verse: "You, dear children, are from God and have overcome them, because the one who is in you is greater than the one who is in the world.",
+      reference: "1 John 4:4",
+      theme: "Victory",
+      icon: Sparkles
     },
     {
       id: 2,
-      title: "Youth Bible Study",
-      date: "January 5, 2026",
-      time: "6:00 PM",
-      location: "Youth Hall",
-      icon: BookOpen,
-      color: "from-blue-500/20 to-cyan-500/20"
+      verse: "Remain in me, as I also remain in you. No branch can bear fruit by itself; it must remain in the vine. Neither can you bear fruit unless you remain in me.",
+      reference: "John 15:4",
+      theme: "Abiding",
+      icon: Heart
     },
     {
       id: 3,
-      title: "Worship Night",
-      date: "January 12, 2026",
-      time: "7:00 PM",
-      location: "Main Sanctuary",
-      icon: Music,
-      color: "from-purple-500/20 to-pink-500/20"
+      verse: "Praise be to the God and Father of our Lord Jesus Christ! In his great mercy he has given us new birth into a living hope through the resurrection of Jesus Christ from the dead.",
+      reference: "1 Peter 1:3",
+      theme: "New Life",
+      icon: BookOpen
     }
   ];
 
-  // Ministries data
+  // Ministries data (keeping this section)
   const ministries = [
     {
       id: 1,
-      name: "Children's Ministry",
+      name: "Sunday School",
       description: "Nurturing young hearts in God's love through engaging lessons and activities",
       icon: Heart,
       participants: "150+",
@@ -100,7 +115,7 @@ const LandingPage = () => {
     },
     {
       id: 2,
-      name: "Youth Ministry",
+      name: "Youth Gathering",
       description: "Empowering the next generation to live out their faith boldly",
       icon: Users,
       participants: "200+",
@@ -270,7 +285,7 @@ const LandingPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Welcome Home
+              Welcome Home EZCC 
             </motion.h1>
             
             <motion.p 
@@ -316,6 +331,7 @@ const LandingPage = () => {
               transition={{ duration: 0.8, delay: 0.8 }}
             >
               <motion.button 
+              onClick={()=>navigate("/login")}
                 className="group relative px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-semibold text-lg overflow-hidden shadow-2xl"
                 whileHover={{ scale: 1.05, boxShadow: "0 20px 40px rgba(245, 158, 11, 0.4)" }}
                 whileTap={{ scale: 0.98 }}
@@ -327,16 +343,7 @@ const LandingPage = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.button>
 
-              <motion.button 
-                className="group px-8 py-4 bg-white/10 backdrop-blur-md text-white rounded-full font-semibold text-lg border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 shadow-xl"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span className="flex items-center justify-center gap-2">
-                  <Play className="w-5 h-5" />
-                  Watch Live
-                </span>
-              </motion.button>
+              
             </motion.div>
           </motion.div>
         </div>
@@ -351,7 +358,7 @@ const LandingPage = () => {
         </motion.div>
       </motion.section>
 
-      {/* Latest Sermons Section */}
+      {/* Bible Verses Section - Featured Verses */}
       <section className="relative py-24 px-6 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto max-w-7xl">
           <FadeInSection>
@@ -363,13 +370,13 @@ const LandingPage = () => {
                 transition={{ duration: 0.6 }}
                 className="inline-block mb-4"
               >
-                <Sparkles className="w-12 h-12 text-amber-400 mx-auto" />
+                <BookOpen className="w-12 h-12 text-amber-400 mx-auto" />
               </motion.div>
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-                Latest Sermons
+                Words of Life
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Messages that inspire, challenge, and transform lives
+                Let these sacred scriptures guide your journey and strengthen your faith
               </p>
             </div>
           </FadeInSection>
@@ -381,85 +388,58 @@ const LandingPage = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {sermons.map((sermon, index) => (
-              <FadeInSection key={sermon.id} delay={index * 0.15}>
-                <motion.div
-                  className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/5 shadow-2xl"
-                  whileHover={{ 
-                    y: -10,
-                    boxShadow: "0 25px 50px rgba(0, 0, 0, 0.5)",
-                    transition: { duration: 0.3 }
-                  }}
-                  style={{
-                    transform: "perspective(1000px) rotateX(0deg)",
-                    transformStyle: "preserve-3d"
-                  }}
-                >
-                  {/* 3D Card Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  
-                  <div className="relative h-64 overflow-hidden">
-                    <motion.img 
-                      src={sermon.image}
-                      alt={sermon.title}
-                      className="w-full h-full object-cover"
-                      whileHover={{ scale: 1.1 }}
-                      transition={{ duration: 0.6 }}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent" />
+            {featuredVerses.map((verse, index) => {
+              const IconComponent = verse.icon;
+              return (
+                <FadeInSection key={verse.id} delay={index * 0.15}>
+                  <motion.div
+                    className="group relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/5 shadow-2xl p-8"
+                    whileHover={{ 
+                      y: -10,
+                      boxShadow: "0 25px 50px rgba(0, 0, 0, 0.5)",
+                      transition: { duration: 0.3 }
+                    }}
+                    style={{
+                      transform: "perspective(1000px) rotateX(0deg)",
+                      transformStyle: "preserve-3d"
+                    }}
+                  >
+                    {/* 3D Card Effect */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     
-                    {/* Play button overlay */}
-                    <motion.div 
-                      className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                      initial={{ scale: 0.8 }}
-                      whileHover={{ scale: 1 }}
-                    >
-                      <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-2xl backdrop-blur-sm">
-                        <Play className="w-8 h-8 text-slate-900 ml-1" fill="currentColor" />
+                    <div className="relative z-10">
+                      <motion.div 
+                        className="w-16 h-16 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <IconComponent className="w-8 h-8 text-amber-400" />
+                      </motion.div>
+
+                      <Quote className="w-8 h-8 text-amber-400/40 mb-4" />
+
+                      <p className="text-lg text-gray-200 italic font-serif leading-relaxed mb-6">
+                        "{verse.verse}"
+                      </p>
+
+                      <div className="flex items-center justify-between">
+                        <p className="text-amber-400 font-semibold">
+                          {verse.reference}
+                        </p>
+                        <span className="px-3 py-1 bg-amber-500/10 text-amber-400 text-sm rounded-full border border-amber-500/20">
+                          {verse.theme}
+                        </span>
                       </div>
-                    </motion.div>
-                  </div>
-
-                  <div className="p-6 relative z-10">
-                    <div className="flex items-center gap-3 text-sm text-gray-400 mb-3">
-                      <span className="flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {sermon.date}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
-                        {sermon.duration}
-                      </span>
                     </div>
-
-                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-amber-400 transition-colors duration-300">
-                      {sermon.title}
-                    </h3>
-                    
-                    <p className="text-gray-400 mb-4">
-                      {sermon.description}
-                    </p>
-
-                    <p className="text-amber-400 font-medium">
-                      {sermon.speaker}
-                    </p>
-
-                    <motion.button 
-                      className="mt-4 w-full py-3 bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-400 rounded-xl font-semibold border border-amber-500/30 hover:bg-amber-500/30 transition-all duration-300"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      Watch Now
-                    </motion.button>
-                  </div>
-                </motion.div>
-              </FadeInSection>
-            ))}
+                  </motion.div>
+                </FadeInSection>
+              );
+            })}
           </motion.div>
         </div>
       </section>
 
-      {/* Upcoming Events Section */}
+      {/* Inspiring Bible Verses Grid Section */}
       <section className="relative py-24 px-6 bg-slate-900">
         <div className="container mx-auto max-w-7xl">
           <FadeInSection>
@@ -471,30 +451,29 @@ const LandingPage = () => {
                 transition={{ duration: 0.8 }}
                 className="inline-block mb-4"
               >
-                <Calendar className="w-12 h-12 text-amber-400 mx-auto" />
+                <Sparkles className="w-12 h-12 text-amber-400 mx-auto" />
               </motion.div>
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
-                Upcoming Events
+                Scripture for Every Season
               </h2>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                Join us in worship, fellowship, and growth
+                God's promises for hope, courage, faith, and peace
               </p>
             </div>
           </FadeInSection>
 
           <motion.div 
-            className="grid md:grid-cols-3 gap-6"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
             variants={staggerContainer}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            {upcomingEvents.map((event, index) => {
-              const IconComponent = event.icon;
+            {bibleVerses.map((verse, index) => {
               return (
-                <FadeInSection key={event.id} delay={index * 0.15}>
+                <FadeInSection key={verse.id} delay={index * 0.1}>
                   <motion.div
-                    className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-2xl p-8 border border-white/10 overflow-hidden"
+                    className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-3xl p-8 border border-white/10 overflow-hidden min-h-[320px] flex flex-col"
                     whileHover={{ 
                       y: -8,
                       boxShadow: "0 20px 40px rgba(0, 0, 0, 0.6)",
@@ -506,44 +485,36 @@ const LandingPage = () => {
                     }}
                   >
                     {/* Gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${event.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                    <div className={`absolute inset-0 bg-gradient-to-br ${verse.bgColor} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
                     
-                    <div className="relative z-10">
+                    <div className="relative z-10 flex-1 flex flex-col">
+                      {/* Theme Badge */}
                       <motion.div 
-                        className="w-16 h-16 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300"
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6 }}
+                        className={`inline-flex items-center gap-2 self-start px-4 py-2 bg-gradient-to-r ${verse.gradient} rounded-full mb-6 shadow-lg`}
+                        whileHover={{ scale: 1.05 }}
                       >
-                        <IconComponent className="w-8 h-8 text-amber-400" />
+                        <BookOpen className="w-4 h-4 text-white" />
+                        <span className="text-white font-semibold text-sm">{verse.theme}</span>
                       </motion.div>
 
-                      <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-amber-400 transition-colors duration-300">
-                        {event.title}
-                      </h3>
+                      {/* Verse Quote Icon */}
+                      <Quote className="w-10 h-10 text-amber-400/30 mb-4" />
 
-                      <div className="space-y-3 text-gray-400">
-                        <div className="flex items-center gap-3">
-                          <Calendar className="w-5 h-5 text-amber-400" />
-                          <span>{event.date}</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <Clock className="w-5 h-5 text-amber-400" />
-                          <span>{event.time}</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <MapPin className="w-5 h-5 text-amber-400" />
-                          <span>{event.location}</span>
-                        </div>
+                      {/* Verse Text */}
+                      <p className="text-base md:text-lg text-gray-200 italic font-serif leading-relaxed mb-6 flex-1">
+                        "{verse.verse}"
+                      </p>
+
+                      {/* Reference */}
+                      <div className="pt-4 border-t border-white/10">
+                        <p className={`text-transparent bg-clip-text bg-gradient-to-r ${verse.gradient} font-bold text-lg`}>
+                          {verse.reference}
+                        </p>
                       </div>
-
-                      <motion.button 
-                        className="mt-6 w-full py-3 bg-white/5 text-white rounded-xl font-semibold border border-white/10 hover:bg-white/10 hover:border-amber-400/50 transition-all duration-300"
-                        whileHover={{ scale: 1.03 }}
-                        whileTap={{ scale: 0.97 }}
-                      >
-                        Learn More
-                      </motion.button>
                     </div>
+
+                    {/* 3D depth effect */}
+                    <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-gradient-to-br from-amber-500/10 to-transparent rounded-full blur-3xl group-hover:scale-150 transition-transform duration-700" />
                   </motion.div>
                 </FadeInSection>
               );
@@ -561,7 +532,7 @@ const LandingPage = () => {
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, type: "spring" }}
+                transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
                 className="inline-block mb-4"
               >
                 <Heart className="w-12 h-12 text-amber-400 mx-auto" />
@@ -631,10 +602,7 @@ const LandingPage = () => {
                         {ministry.description}
                       </p>
 
-                      <div className="flex items-center gap-2 text-amber-400 font-semibold">
-                        <Users className="w-5 h-5" />
-                        <span>{ministry.participants} Members</span>
-                      </div>
+                      
                     </div>
 
                     {/* 3D depth effect */}
@@ -713,25 +681,19 @@ const LandingPage = () => {
                 viewport={{ once: true }}
               >
                 <motion.button 
+                  onClick={()=>navigate("/signup")}
                   variants={scaleIn}
                   className="group px-10 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-full font-bold text-lg shadow-2xl hover:shadow-amber-500/50 transition-all duration-300"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.98 }}
                 >
                   <span className="flex items-center justify-center gap-2">
-                    Plan Your Visit
+                    Join us
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </motion.button>
 
-                <motion.button 
-                  variants={scaleIn}
-                  className="px-10 py-4 bg-white/10 backdrop-blur-md text-white rounded-full font-bold text-lg border-2 border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300"
-                  whileHover={{ scale: 1.05, y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  Contact Us
-                </motion.button>
+                
               </motion.div>
             </motion.div>
           </FadeInSection>
