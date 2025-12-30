@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  /* This tells Tailwind to use the .dark class on a parent element */
+  --color-*: initial;
+}
+
+/* Tailwind v4 detects dark mode via the [data-theme='dark'] attribute 
+   or the .dark class by default if you set it up like this: */
+@variant dark (&:where(.dark, .dark *));
