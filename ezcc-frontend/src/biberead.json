@@ -1,0 +1,1244 @@
+[
+    {
+      "month": "January 2025",
+      "reading_plan": [
+        {
+          "date": "2025-01-01",
+          "chapters": ["Matt. 1:1-17", "Acts 1:1-11", "Psalms 1", "Genesis 1-2"]
+        },
+        {
+          "date": "2025-01-02",
+          "chapters": ["Matt. 1:18-25", "Acts 1:12-26", "Psalms 2", "Genesis 3-4"]
+        },
+        {
+          "date": "2025-01-03",
+          "chapters": ["Matt. 2:1-12", "Acts 2:1-21", "Psalms 3", "Genesis 5-6"]
+        },
+        {
+          "date": "2025-01-04",
+          "chapters": ["Matt. 2:13-23", "Acts 2:22-47", "Psalms 4", "Genesis 9-11"]
+        },
+        {
+          "date": "2025-01-05",
+          "chapters": ["Matt. 3:1-12", "Acts 3", "Psalms 5", "Genesis 12-14"]
+        },
+        {
+          "date": "2025-01-06",
+          "chapters": ["Matt. 3:13-17", "Acts 4:1-22", "Psalms 6", "Genesis 15-17"]
+        },
+        {
+          "date": "2025-01-07",
+          "chapters": ["Matt. 4:1-11", "Acts 4:23-37", "Psalms 7", "Genesis 18-20"]
+        },
+        {
+          "date": "2025-01-08",
+          "chapters": ["Matt. 4:12-17", "Acts 5:1-16", "Psalms 8", "Genesis 21-23"]
+        },
+        {
+          "date": "2025-01-09",
+          "chapters": ["Matt. 4:18-25", "Acts 5:17-42", "Psalms 9", "Genesis 24"]
+        },
+        {
+          "date": "2025-01-10",
+          "chapters": ["Matt. 5:1-12", "Acts 6", "Psalms 10", "Genesis 25-26"]
+        },
+        {
+          "date": "2025-01-11",
+          "chapters": ["Matt. 5:13-20", "Acts 7:1-38", "Psalms 11", "Genesis 27-28"]
+        },
+        {
+          "date": "2025-01-12",
+          "chapters": ["Matt. 5:21-32", "Acts 7:39-60", "Psalms 12", "Genesis 29-30"]
+        },
+        {
+          "date": "2025-01-13",
+          "chapters": ["Matt. 5:33-48", "Acts 8:1-25", "Psalms 13", "Genesis 31"]
+        },
+        {
+          "date": "2025-01-14",
+          "chapters": ["Matt. 5:1-18", "Acts 8:26-40", "Psalms 14", "Genesis 32-33"]
+        },
+        {
+          "date": "2025-01-15",
+          "chapters": ["Matt. 6:19-34", "Acts 9:1-19", "Psalms 15", "Genesis 34-35"]
+        },
+        {
+          "date": "2025-01-16",
+          "chapters": ["Matt. 6:20-43", "Acts 9:20-43", "Psalms 16", "Genesis 36"]
+        },
+        {
+          "date": "2025-01-17",
+          "chapters": ["Matt. 7:1-14", "Acts 10:1-23", "Psalms 17", "Genesis 37-38"]
+        },
+        {
+          "date": "2025-01-18",
+          "chapters": ["Matt. 7:15-29", "Acts 10:24-48", "Psalms 18:1-24", "Genesis 39-40"]
+        },
+        {
+          "date": "2025-01-19",
+          "chapters": ["Matt. 8:1-13", "Acts 11:1-18", "Psalms 18:25-50", "Genesis 41"]
+        },
+        {
+          "date": "2025-01-20",
+          "chapters": ["Matt. 8:14-22", "Acts 11:19-30", "Psalms 19", "Genesis 42-43"]
+        },
+        {
+          "date": "2025-01-21",
+          "chapters": ["Matt. 8:23-34", "Acts 12", "Psalms 20", "Genesis 44-45"]
+        },
+        {
+          "date": "2025-01-22",
+          "chapters": ["Matt. 9:1-13", "Acts 13:1-25", "Psalms 21", "Genesis 46-47"]
+        },
+        {
+          "date": "2025-01-23",
+          "chapters": ["Matt. 9:14-26", "Acts 13:26-52", "Psalms 22:1-11", "Genesis 48"]
+        },
+        {
+          "date": "2025-01-24",
+          "chapters": ["Matt. 9:27-38", "Acts 14", "Psalms 22:12-31", "Genesis 49"]
+        },
+        {
+          "date": "2025-01-25",
+          "chapters": ["Matt. 10:1-20", "Acts 15:1-21", "Psalms 23", "Genesis 50"]
+        }
+      ]
+    },
+    {
+      "month": "February 2025",
+      "reading_plan": [
+        {
+          "date": "2025-02-01",
+          "chapters": ["Matt. 10:21-42", "Acts 15:22-41", "Psalms 24", "Exodus 1-4"]
+        },
+        {
+          "date": "2025-02-02",
+          "chapters": ["Matt. 11:1-19", "Acts 16:1-15", "Psalms 25", "Exodus 4-6"]
+        },
+        {
+          "date": "2025-02-03",
+          "chapters": ["Matt. 11:20-30", "Acts 16:16-40", "Psalms 26", "Exodus 7-9"]
+        },
+        {
+          "date": "2025-02-04",
+          "chapters": ["Matt. 12:1-21", "Acts 17:1-15", "Psalms 27", "Exodus 10-12"]
+        },
+        {
+          "date": "2025-02-05",
+          "chapters": ["Matt. 12:22-37", "Acts 17:16-34", "Psalms 28", "Exodus 13-15"]
+        },
+        {
+          "date": "2025-02-06",
+          "chapters": ["Matt. 12:38-50", "Acts 18:1-17", "Psalms 29", "Exodus 16-18"]
+        },
+        {
+          "date": "2025-02-07",
+          "chapters": ["Matt. 13:1-23", "Acts 18:18-28", "Psalms 30", "Exodus 19-20"]
+        },
+        {
+          "date": "2025-02-08",
+          "chapters": ["Matt. 13:24-43", "Acts 19:1-22", "Psalms 31", "Exodus 21-23"]
+        },
+        {
+          "date": "2025-02-09",
+          "chapters": ["Matt. 13:44-58", "Acts 19:23-41", "Psalms 32", "Exodus 24-26"]
+        },
+        {
+          "date": "2025-02-10",
+          "chapters": ["Matt. 14:1-21", "Acts 20:1-12", "Psalms 33", "Exodus 27-29"]
+        },
+        {
+          "date": "2025-02-11",
+          "chapters": ["Matt. 14:22-36", "Acts 20:13-38", "Psalms 34", "Exodus 30-31"]
+        },
+        {
+          "date": "2025-02-12",
+          "chapters": ["Matt. 15:1-20", "Acts 21:1-26", "Psalms 35", "Exodus 32-33"]
+        },
+        {
+          "date": "2025-02-13",
+          "chapters": ["Matt. 15:21-39", "Acts 21:27-40", "Psalms 36", "Exodus 34"]
+        },
+        {
+          "date": "2025-02-14",
+          "chapters": ["Matt. 16:1-12", "Acts 22", "Psalms 37:1-22", "Exodus 35-37"]
+        },
+        {
+          "date": "2025-02-15",
+          "chapters": ["Matt. 16:13-28", "Acts 23:1-11", "Psalms 37:23-40", "Exodus 38-40"]
+        },
+        {
+          "date": "2025-02-16",
+          "chapters": ["Matt. 17:1-13", "Acts 23:12-35", "Psalms 38", "Lev. 1-3"]
+        },
+        {
+          "date": "2025-02-17",
+          "chapters": ["Matt. 17:14-27", "Acts 24", "Psalms 39", "Lev. 4-5"]
+        },
+        {
+          "date": "2025-02-18",
+          "chapters": ["Matt. 18:1-14", "Acts 25:1-12", "Psalms 40", "Lev. 6-7"]
+        },
+        {
+          "date": "2025-02-19",
+          "chapters": ["Matt. 18:15-35", "Acts 25:13-27", "Psalms 41", "Lev. 8-10"]
+        },
+        {
+          "date": "2025-02-20",
+          "chapters": ["Matt. 19:1-15", "Acts 26:1-18", "Psalms 42", "Lev. 11-13"]
+        },
+        {
+          "date": "2025-02-21",
+          "chapters": ["Matt. 19:16-30", "Acts 26:19-32", "Psalms 43", "Lev. 14-15"]
+        },
+        {
+          "date": "2025-02-22",
+          "chapters": ["Matt. 20:1-16", "Acts 27:1-26", "Psalms 44", "Lev. 16-17"]
+        },
+        {
+          "date": "2025-02-23",
+          "chapters": ["Matt. 20:17-34", "Acts 27:27-44", "Psalms 45", "Lev. 18-20"]
+        },
+        {
+          "date": "2025-02-24",
+          "chapters": ["Matt. 21:1-11", "Acts 28:1-16", "Psalms 46", "Lev. 21-23"]
+        },
+        {
+          "date": "2025-02-25",
+          "chapters": ["Matt. 21:12-16", "Acts 28:17-31", "Psalms 47", "Lev. 24-25"]
+        }
+      ]
+    },
+    {
+      "month": "March 2025",
+      "reading_plan": [
+        {
+          "date": "2025-03-01",
+          "chapters": ["Matt. 21:23-32", "Rom. 1:1-17", "Psalms 48", "Num. 1-2"]
+        },
+        {
+          "date": "2025-03-02",
+          "chapters": ["Matt. 21:33-46", "Rom. 1:18-32", "Psalms 49", "Num. 3-4"]
+        },
+        {
+          "date": "2025-03-03",
+          "chapters": ["Matt. 22:1-14", "Romans 2", "Psalms 50", "Num. 5-6"]
+        },
+        {
+          "date": "2025-03-04",
+          "chapters": ["Matt. 22:15-33", "Romans 3", "Psalms 51", "Num. 7-8"]
+        },
+        {
+          "date": "2025-03-05",
+          "chapters": ["Matt. 22:34-46", "Romans 4", "Psalms 52", "Num. 9-11"]
+        },
+        {
+          "date": "2025-03-06",
+          "chapters": ["Matt. 23:1-12", "Rom. 5:1-11", "Psalms 53", "Num. 12-14"]
+        },
+        {
+          "date": "2025-03-07",
+          "chapters": ["Matt. 23:13-24", "Rom. 5:12-21", "Psalms 54", "Num. 15-17"]
+        },
+        {
+          "date": "2025-03-08",
+          "chapters": ["Matt. 23:25-39", "Rom. 6:1-14", "Psalms 55", "Num. 18-20"]
+        },
+        {
+          "date": "2025-03-09",
+          "chapters": ["Matt. 24:1-14", "Rom. 6:15-23", "Psalms 56", "Num. 21-22"]
+        },
+        {
+          "date": "2025-03-10",
+          "chapters": ["Matt. 24:15-35", "Rom. 7:1-12", "Psalms 57", "Num. 23-25"]
+        },
+        {
+          "date": "2025-03-11",
+          "chapters": ["Matt. 24:36-51", "Rom. 7:13-25", "Psalms 58", "Num. 26-27"]
+        },
+        {
+          "date": "2025-03-12",
+          "chapters": ["Matt. 25:1-13", "Rom. 8:1-17", "Psalms 59", "Num. 28-30"]
+        },
+        {
+          "date": "2025-03-13",
+          "chapters": ["Matt. 25:14-30", "Rom. 8:18-39", "Psalms 60", "Num. 31-32"]
+        },
+        {
+          "date": "2025-03-14",
+          "chapters": ["Matt. 25:31-46", "Rom. 9:1-18", "Psalms 61", "Num. 33-36"]
+        },
+        {
+          "date": "2025-03-15",
+          "chapters": ["Matt. 26:1-16", "Rom. 9:19-33", "Psalms 62", "Deut. 1-3"]
+        },
+        {
+          "date": "2025-03-16",
+          "chapters": ["Matt. 26:17-35", "Romans 10", "Psalms 63", "Deut. 4-5"]
+        },
+        {
+          "date": "2025-03-17",
+          "chapters": ["Matt. 26:36-56", "Rom. 11:1-24", "Psalms 64", "Deut. 6-8"]
+        },
+        {
+          "date": "2025-03-18",
+          "chapters": ["Matt. 26:57-75", "Rom. 11:25-36", "Psalms 65", "Deut. 9-12"]
+        },
+        {
+          "date": "2025-03-19",
+          "chapters": ["Matt. 27:1-10", "Rom. 12:1-8", "Psalms 66", "Deut. 13-17"]
+        },
+        {
+          "date": "2025-03-20",
+          "chapters": ["Matt. 27:11-26", "Rom. 12:9-21", "Psalms 67", "Deut. 18-21"]
+        },
+        {
+          "date": "2025-03-21",
+          "chapters": ["Matt. 27:27-44", "Romans 13", "Psalms 68", "Deut. 22-26"]
+        },
+        {
+          "date": "2025-03-22",
+          "chapters": ["Matt. 27:45-66", "Romans 14", "Psalms 69:1-18", "Deut. 27-28"]
+        },
+        {
+          "date": "2025-03-23",
+          "chapters": ["Matt. 27:57-66", "Rom. 15:1-13", "Psalms 69:19-36", "Deut. 29-31"]
+        },
+        {
+          "date": "2025-03-24",
+          "chapters": ["Matt. 28:1-10", "Rom. 15:14-33", "Psalms 70", "Deut. 32"]
+        },
+        {
+          "date": "2025-03-25",
+          "chapters": ["Matt. 28:11-20", "Romans 16", "Psalms 71", "Deut. 33-34"]
+        }
+      ]
+    },
+    {
+      "month": "April 2025",
+      "reading_plan": [
+        {
+          "date": "2025-04-01",
+          "chapters": ["Mark 1:1-8", "1 Cor. 1:1-17", "Psalms 72", "Joshua 1-2"]
+        },
+        {
+          "date": "2025-04-02",
+          "chapters": ["Mark 1:9-20", "1 Cor. 1:18-31", "Psalms 73", "Joshua 3-5"]
+        },
+        {
+          "date": "2025-04-03",
+          "chapters": ["Mark 1:21-34", "1 Cor. 2", "Psalms 74", "Joshua 6-7"]
+        },
+        {
+          "date": "2025-04-04",
+          "chapters": ["Mark 1:35-45", "1 Cor. 3", "Psalms 75", "Joshua 8-9"]
+        },
+        {
+          "date": "2025-04-05",
+          "chapters": ["Mark 2:1-12", "1 Cor. 4", "Psalms 76", "Joshua 10-12"]
+        },
+        {
+          "date": "2025-04-06",
+          "chapters": ["Mark 2:13-17", "1 Cor. 5", "Psalms 77", "Joshua 13-15"]
+        },
+        {
+          "date": "2025-04-07",
+          "chapters": ["Mark 2:18-28", "1 Cor. 6:1-11", "Psalms 78:1-39", "Joshua 16-17"]
+        },
+        {
+          "date": "2025-04-08",
+          "chapters": ["Mark 3:1-19", "1 Cor. 6:12-20", "Psalms 78:40-72", "Joshua 18-19"]
+        },
+        {
+          "date": "2025-04-09",
+          "chapters": ["Mark 3:20-35", "1 Cor. 7:1-16", "Psalms 79", "Joshua 20-21"]
+        },
+        {
+          "date": "2025-04-10",
+          "chapters": ["Mark 4:1-20", "1 Cor. 7:17-40", "Psalms 80", "Joshua 22-23"]
+        },
+        {
+          "date": "2025-04-11",
+          "chapters": ["Mark 4:21-41", "1 Cor. 8", "Psalms 81", "Joshua 24"]
+        },
+        {
+          "date": "2025-04-12",
+          "chapters": ["Mark 5:1-20", "1 Cor. 9:1-12", "Psalms 82", "Judges 1-3"]
+        },
+        {
+          "date": "2025-04-13",
+          "chapters": ["Mark 5:21-43", "1 Cor. 9:13-27", "Psalms 83", "Judges 4-5"]
+        },
+        {
+          "date": "2025-04-14",
+          "chapters": ["Mark 6:1-13", "1 Cor. 10:1-13", "Psalms 84", "Judges 6-7"]
+        },
+        {
+          "date": "2025-04-15",
+          "chapters": ["Mark 6:14-29", "1 Cor. 10:14-33", "Psalms 85", "Judges 8"]
+        },
+        {
+          "date": "2025-04-16",
+          "chapters": ["Mark 6:30-44", "1 Cor. 11:1-16", "Psalms 86", "Judges 9"]
+        },
+        {
+          "date": "2025-04-17",
+          "chapters": ["Mark 6:45-56", "1 Cor. 11:17-34", "Psalms 87", "Judges 10-12"]
+        },
+        {
+          "date": "2025-04-18",
+          "chapters": ["Mark 7:1-23", "1 Cor. 12:1-13", "Psalms 88", "Judges 13-15"]
+        },
+        {
+          "date": "2025-04-19",
+          "chapters": ["Mark 7:24-37", "1 Cor. 12:14-31", "Psalms 89:1-18", "Judges 16"]
+        },
+        {
+          "date": "2025-04-20",
+          "chapters": ["Mark 8:1-13", "1 Cor. 13", "Psalms 89:19-52", "Judges 17-18"]
+        },
+        {
+          "date": "2025-04-21",
+          "chapters": ["Mark 8:14-21", "1 Cor. 14:1-25", "Psalms 90", "Judges 19"]
+        },
+        {
+          "date": "2025-04-22",
+          "chapters": ["Mark 8:22-30", "1 Cor. 14:26-40", "Psalms 91", "Judges 20-21"]
+        },
+        {
+          "date": "2025-04-23",
+          "chapters": ["Mark 8:31-38", "1 Cor. 15:1-28", "Psalms 92", "Ruth 1"]
+        },
+        {
+          "date": "2025-04-24",
+          "chapters": ["Mark 9:1-13", "1 Cor. 15:29-58", "Psalms 93", "Ruth 2-3"]
+        },
+        {
+          "date": "2025-04-25",
+          "chapters": ["Mark 9:14-32", "1 Cor. 16", "Psalms 94", "Ruth 4"]
+        }
+      ]
+    },
+    {
+      "month": "May 2025",
+      "reading_plan": [
+        {
+          "date": "2025-05-01",
+          "chapters": ["Mark 9:33-50", "2 Cor. 1:1-11", "Psalms 95", "1 Samuel 1-2"]
+        },
+        {
+          "date": "2025-05-02",
+          "chapters": ["Mark 10:1-16", "2 Cor. 1:12-24", "Psalms 96", "1 Samuel 3-5"]
+        },
+        {
+          "date": "2025-05-03",
+          "chapters": ["Mark 10:17-34", "2 Cor. 2", "Psalms 97", "1 Samuel 6-8"]
+        },
+        {
+          "date": "2025-05-04",
+          "chapters": ["Mark 10:35-52", "2 Cor. 3", "Psalms 98", "1 Samuel 9-10"]
+        },
+        {
+          "date": "2025-05-05",
+          "chapters": ["Mark 11:1-11", "2 Cor. 4", "Psalms 99", "1 Samuel 11-13"]
+        },
+        {
+          "date": "2025-05-06",
+          "chapters": ["Mark 11:12-26", "2 Cor. 5", "Psalms 100", "1 Samuel 14"]
+        },
+        {
+          "date": "2025-05-07",
+          "chapters": ["Mark 11:27-33", "2 Cor. 6", "Psalms 101", "1 Samuel 15-16"]
+        },
+        {
+          "date": "2025-05-08",
+          "chapters": ["Mark 12:1-12", "2 Cor. 7", "Psalms 102", "1 Samuel 17-18"]
+        },
+        {
+          "date": "2025-05-09",
+          "chapters": ["Mark 12:13-27", "2 Cor. 8", "Psalms 103", "1 Samuel 19-20"]
+        },
+        {
+          "date": "2025-05-10",
+          "chapters": ["Mark 12:28-34", "2 Cor. 9", "Psalms 104", "1 Samuel 21-23"]
+        },
+        {
+          "date": "2025-05-11",
+          "chapters": ["Mark 12:35-44", "2 Cor. 10", "Psalms 105", "1 Samuel 24-25"]
+        },
+        {
+          "date": "2025-05-12",
+          "chapters": ["Mark 13:1-13", "2 Cor. 11:1-15", "Psalms 106:1-23", "1 Samuel 26-28"]
+        },
+        {
+          "date": "2025-05-13",
+          "chapters": ["Mark 13:14-31", "2 Cor. 11:16-33", "Psalms 106:24-48", "1 Samuel 29-31"]
+        },
+        {
+          "date": "2025-05-14",
+          "chapters": ["Mark 13:32-37", "2 Cor. 12:1-10", "Psalms 107", "2 Samuel 1-2"]
+        },
+        {
+          "date": "2025-05-15",
+          "chapters": ["Mark 14:1-11", "2 Cor. 12:11-21", "Psalms 108", "2 Samuel 3-4"]
+        },
+        {
+          "date": "2025-05-16",
+          "chapters": ["Mark 14:12-31", "2 Cor. 13", "Psalms 109", "2 Samuel 5-7"]
+        },
+        {
+          "date": "2025-05-17",
+          "chapters": ["Mark 14:32-42", "Galatians 1", "Psalms 110", "2 Samuel 8-10"]
+        },
+        {
+          "date": "2025-05-18",
+          "chapters": ["Mark 14:43-52", "Galatians 2", "Psalms 111", "2 Samuel 11-12"]
+        },
+        {
+          "date": "2025-05-19",
+          "chapters": ["Mark 14:53-65", "Gal. 3:1-14", "Psalms 112", "2 Samuel 13"]
+        },
+        {
+          "date": "2025-05-20",
+          "chapters": ["Mark 14:66-72", "Gal. 3:15-29", "Psalms 113", "2 Samuel 14-15"]
+        },
+        {
+          "date": "2025-05-21",
+          "chapters": ["Mark 15:1-15", "Gal. 4:1-20", "Psalms 114", "2 Samuel 16-17"]
+        },
+        {
+          "date": "2025-05-22",
+          "chapters": ["Mark 15:16-32", "Gal. 4:21-31", "Psalms 115", "2 Samuel 18-19"]
+        },
+        {
+          "date": "2025-05-23",
+          "chapters": ["Mark 15:33-41", "Gal. 5:1-12", "Psalms 116", "2 Samuel 20-21"]
+        },
+        {
+          "date": "2025-05-24",
+          "chapters": ["Mark 15:42-47", "Gal. 5:13-26", "Psalms 117", "2 Samuel 22"]
+        },
+        {
+          "date": "2025-05-25",
+          "chapters": ["Mark 16", "Galatians 6", "Psalms 118", "2 Samuel 23-24"]
+        }
+      ]
+    },
+    {
+      "month": "June 2025",
+      "reading_plan": [
+        {
+          "date": "2025-06-01",
+          "chapters": ["Luke 1:1-38", "Eph. 1:1-14", "Psalms 119:1-8", "1 Kings 1"]
+        },
+        {
+          "date": "2025-06-02",
+          "chapters": ["Luke 1:39-56", "Eph. 1:15-23", "Ps. 119:9-16", "1 Kings 2-3"]
+        },
+        {
+          "date": "2025-06-03",
+          "chapters": ["Luke 1:57-80", "Eph. 2:1-10", "Ps. 119:17-24", "1 Kings 4-5"]
+        },
+        {
+          "date": "2025-06-04",
+          "chapters": ["Luke 2:1-20", "Eph. 2:11-22", "Ps. 119:25-32", "1 Kings 6-7"]
+        },
+        {
+          "date": "2025-06-05",
+          "chapters": ["Luke 2:21-40", "Eph. 3:1-13", "Ps. 119:33-40", "1 Kings 8"]
+        },
+        {
+          "date": "2025-06-06",
+          "chapters": ["Luke 2:41-52", "Eph. 3:14-21", "Ps. 119:41-48", "1 Kings 9-10"]
+        },
+        {
+          "date": "2025-06-07",
+          "chapters": ["Luke 3:1-20", "Eph. 4:1-16", "Ps. 119:49-56", "1 Kings 11-12"]
+        },
+        {
+          "date": "2025-06-08",
+          "chapters": ["Luke 3:21-38", "Eph. 4:17-32", "Ps. 119:57-64", "1 Kings 13-14"]
+        },
+        {
+          "date": "2025-06-09",
+          "chapters": ["Luke 4:1-13", "Eph. 5:1-20", "Ps. 119:65-72", "1 Kings 15-16"]
+        },
+        {
+          "date": "2025-06-10",
+          "chapters": ["Luke 4:14-30", "Eph. 5:21-33", "Ps. 119:73-80", "1 Kings 17-18"]
+        },
+        {
+          "date": "2025-06-11",
+          "chapters": ["Luke 4:31-37", "Eph. 6:1-9", "Ps. 119:81-88", "1 Kings 19-20"]
+        },
+        {
+          "date": "2025-06-12",
+          "chapters": ["Luke 4:38-44", "Eph. 6:10-24", "Ps. 119:89-96", "1 Kings 21-22"]
+        },
+        {
+          "date": "2025-06-13",
+          "chapters": ["Luke 5:1-11", "Philippians 1:1-11", "Ps. 119:97-104", "2 Kings 1-2"]
+        },
+        {
+          "date": "2025-06-14",
+          "chapters": ["Luke 5:12-16", "Phil. 1:12-30", "Ps. 119:105-112", "2 Kings 3-4"]
+        },
+        {
+          "date": "2025-06-15",
+          "chapters": ["Luke 5:17-26", "Phil. 2:1-11", "Ps. 119:113-120", "2 Kings 5-6"]
+        },
+        {
+          "date": "2025-06-16",
+          "chapters": ["Luke 5:27-32", "Phil. 2:12-18", "Ps. 119:121-128", "2 Kings 7-8"]
+        },
+        {
+          "date": "2025-06-17",
+          "chapters": ["Luke 5:33-39", "Phil. 2:19-30", "Ps. 119:129-136", "2 Kings 9-10"]
+        },
+        {
+          "date": "2025-06-18",
+          "chapters": ["Luke 6:1-16", "Phil. 3:1-9", "Ps. 119:137-144", "2 Kings 11-12"]
+        },
+        {
+          "date": "2025-06-19",
+          "chapters": ["Luke 6:17-26", "Phil. 3:10-21", "Ps. 119:145-152", "2 Kings 13-14"]
+        },
+        {
+          "date": "2025-06-20",
+          "chapters": ["Luke 6:27-36", "Phil. 4:1-9", "Ps. 119:153-160", "2 Kings 15-16"]
+        },
+        {
+          "date": "2025-06-21",
+          "chapters": ["Luke 6:37-42", "Phil. 4:10-14", "Ps. 119:161-168", "2 Kings 17-18"]
+        },
+        {
+          "date": "2025-06-22",
+          "chapters": ["Luke 6:43-49", "Phil. 4:15-23", "Ps. 119:169-176", "2 Kings 19"]
+        },
+        {
+          "date": "2025-06-23",
+          "chapters": ["Luke 7:1-10", "Col. 1:1-14", "Psalms 120", "2 Kings 20-21"]
+        },
+        {
+          "date": "2025-06-24",
+          "chapters": ["Luke 7:11-17", "Col. 1:15-23", "Psalms 121", "2 Kings 22-23"]
+        },
+        {
+          "date": "2025-06-25",
+          "chapters": ["Luke 7:18-35", "Col. 1:24-29", "Psalms 122", "2 Kings 24-25"]
+        }
+      ]
+    },
+    {
+      "month": "July 2025",
+      "reading_plan": [
+        {
+          "date": "2025-07-01",
+          "chapters": ["Luke 7:36-50", "Col. 2:1-15", "Psalms 123", "1 Chron. 1-3"]
+        },
+        {
+          "date": "2025-07-02",
+          "chapters": ["Luke 8:1-15", "Col. 2:16-23", "Psalms 124", "1 Chron. 4-6"]
+        },
+        {
+          "date": "2025-07-03",
+          "chapters": ["Luke 8:16-21", "Col. 3:1-17", "Psalms 125", "1 Chron. 7-9"]
+        },
+        {
+          "date": "2025-07-04",
+          "chapters": ["Luke 8:22-25", "Col. 3:18-25", "Psalms 126", "1 Chron. 10-12"]
+        },
+        {
+          "date": "2025-07-05",
+          "chapters": ["Luke 8:26-39", "Col. 4:1-9", "Psalms 127", "1 Chron. 13-14"]
+        },
+        {
+          "date": "2025-07-06",
+          "chapters": ["Luke 8:40-56", "Col. 4:10-18", "Psalms 128", "1 Chron. 15-16"]
+        },
+        {
+          "date": "2025-07-07",
+          "chapters": ["Luke 9:1-17", "1 Thes. 1:1-10", "Psalms 129", "1 Chron. 17-19"]
+        },
+        {
+          "date": "2025-07-08",
+          "chapters": ["Luke 9:18-27", "1 Thes. 2:1-16", "Psalms 130", "1 Chron. 20-22"]
+        },
+        {
+          "date": "2025-07-09",
+          "chapters": ["Luke 9:28-36", "1 Thes. 2:17-20", "Psalms 131", "1 Chron. 23-25"]
+        },
+        {
+          "date": "2025-07-10",
+          "chapters": ["Luke 9:37-50", "1 Thes. 3:1-13", "Psalms 132", "1 Chron. 26-27"]
+        },
+        {
+          "date": "2025-07-11",
+          "chapters": ["Luke 9:51-62", "1 Thes. 4:1-12", "Psalms 133", "1 Chron. 28-29"]
+        },
+        {
+          "date": "2025-07-12",
+          "chapters": ["Luke 10:1-16", "1 Thes. 4:13-18", "Psalms 134", "2 Chron. 1-2"]
+        },
+        {
+          "date": "2025-07-13",
+          "chapters": ["Luke 10:17-24", "1 Thes. 5:1-11", "Psalms 135", "2 Chron. 3-5"]
+        },
+        {
+          "date": "2025-07-14",
+          "chapters": ["Luke 10:25-37", "1 Thes. 5:12-28", "Psalms 136", "2 Chron. 6-7"]
+        },
+        {
+          "date": "2025-07-15",
+          "chapters": ["Luke 10:38-42", "2 Thes. 1:1-12", "Psalms 137", "2 Chron. 8-9"]
+        },
+        {
+          "date": "2025-07-16",
+          "chapters": ["Luke 11:1-13", "2 Thes. 2:1-12", "Psalms 138", "2 Chron. 10-12"]
+        },
+        {
+          "date": "2025-07-17",
+          "chapters": ["Luke 11:14-28", "2 Thes. 2:13-17", "Psalms 139", "2 Chron. 13-16"]
+        },
+        {
+          "date": "2025-07-18",
+          "chapters": ["Luke 11:29-36", "2 Thes. 3:1-5", "Psalms 140", "2 Chron. 17-19"]
+        },
+        {
+          "date": "2025-07-19",
+          "chapters": ["Luke 11:37-54", "2 Thes. 3:6-13", "Psalms 141", "2 Chron. 20-21"]
+        },
+        {
+          "date": "2025-07-20",
+          "chapters": ["Luke 12:1-12", "2 Thes. 3:14-18", "Psalms 142", "2 Chron. 22-24"]
+        },
+        {
+          "date": "2025-07-21",
+          "chapters": ["Luke 12:13-21", "1 Tim. 1:1-11", "Psalms 143", "2 Chron. 25-27"]
+        },
+        {
+          "date": "2025-07-22",
+          "chapters": ["Luke 12:22-34", "1 Tim. 1:12-20", "Psalms 144", "2 Chron. 28-29"]
+        },
+        {
+          "date": "2025-07-23",
+          "chapters": ["Luke 12:35-48", "1 Tim. 2:1-15", "Psalms 145", "2 Chron. 30-31"]
+        },
+        {
+          "date": "2025-07-24",
+          "chapters": ["Luke 12:49-59", "1 Tim. 3:1-13", "Psalms 146", "2 Chron. 32-33"]
+        },
+        {
+          "date": "2025-07-25",
+          "chapters": ["Luke 13:1-9", "1 Tim. 3:14-16", "Psalms 147", "2 Chron. 34-36"]
+        }
+      ]
+    },
+    {
+      "month": "August 2025",
+      "reading_plan": [
+        {
+          "date": "2025-08-01",
+          "chapters": ["Luke 13:10-17", "1 Tim. 4:1-11", "Proverbs 1", "Ezra 1-2"]
+        },
+        {
+          "date": "2025-08-02",
+          "chapters": ["Luke 13:18-21", "1 Tim. 4:12-16", "Proverbs 2", "Ezra 3"]
+        },
+        {
+          "date": "2025-08-03",
+          "chapters": ["Luke 13:22-35", "1 Tim. 5:1-15", "Proverbs 3", "Ezra 4-5"]
+        },
+        {
+          "date": "2025-08-04",
+          "chapters": ["Luke 14:1-14", "1 Tim. 5:16-25", "Proverbs 4", "Ezra 6"]
+        },
+        {
+          "date": "2025-08-05",
+          "chapters": ["Luke 14:15-24", "1 Tim. 6:1-10", "Proverbs 5", "Ezra 7"]
+        },
+        {
+          "date": "2025-08-06",
+          "chapters": ["Luke 14:25-35", "1 Tim. 6:11-21", "Proverbs 6", "Ezra 8"]
+        },
+        {
+          "date": "2025-08-07",
+          "chapters": ["Luke 15:1-10", "2 Tim. 1:1-18", "Proverbs 7", "Ezra 9"]
+        },
+        {
+          "date": "2025-08-08",
+          "chapters": ["Luke 15:11-32", "2 Tim. 2:1-13", "Proverbs 8", "Ezra 10"]
+        },
+        {
+          "date": "2025-08-09",
+          "chapters": ["Luke 16:1-9", "2 Tim. 2:14-26", "Proverbs 9", "Nehemiah 1-2"]
+        },
+        {
+          "date": "2025-08-10",
+          "chapters": ["Luke 16:10-18", "2 Tim. 3:1-9", "Proverbs 10:1-16", "Nehemiah 3"]
+        },
+        {
+          "date": "2025-08-11",
+          "chapters": ["Luke 16:19-31", "2 Tim. 3:10-17", "Proverbs 10:17-32", "Nehemiah 4-5"]
+        },
+        {
+          "date": "2025-08-12",
+          "chapters": ["Luke 17:1-10", "2 Tim. 4:1-8", "Proverbs 11:1-15", "Nehemiah 6"]
+        },
+        {
+          "date": "2025-08-13",
+          "chapters": ["Luke 17:11-19", "2 Tim. 4:9-22", "Proverbs 11:16-31", "Nehemiah 7"]
+        },
+        {
+          "date": "2025-08-14",
+          "chapters": ["Luke 17:20-37", "Titus 1:1-16", "Proverbs 12:1-14", "Nehemiah 8"]
+        },
+        {
+          "date": "2025-08-15",
+          "chapters": ["Luke 18:1-8", "Titus 2:1-15", "Proverbs 12:15-28", "Nehemiah 9"]
+        },
+        {
+          "date": "2025-08-16",
+          "chapters": ["Luke 18:9-17", "Titus 3:1-15", "Proverbs 13:1-12", "Nehemiah 10"]
+        },
+        {
+          "date": "2025-08-17",
+          "chapters": ["Luke 18:18-30", "Philemon", "Proverbs 13:13-25", "Nehemiah 11"]
+        },
+        {
+          "date": "2025-08-18",
+          "chapters": ["Luke 18:31-43", "Heb. 1:1-14", "Proverbs 14:1-18", "Nehemiah 12"]
+        },
+        {
+          "date": "2025-08-19",
+          "chapters": ["Luke 19:1-10", "Heb. 2:1-18", "Proverbs 14:19-35", "Nehemiah 13"]
+        },
+        {
+          "date": "2025-08-20",
+          "chapters": ["Luke 19:11-27", "Heb. 3:1-19", "Proverbs 15:1-17", "Esther 1"]
+        },
+        {
+          "date": "2025-08-21",
+          "chapters": ["Luke 19:28-38", "Heb. 4:1-13", "Proverbs 15:18-33", "Esther 2"]
+        },
+        {
+          "date": "2025-08-22",
+          "chapters": ["Luke 19:39-48", "Heb. 4:14-16", "Proverbs 16:1-16", "Esther 3-4"]
+        },
+        {
+          "date": "2025-08-23",
+          "chapters": ["Luke 20:1-8", "Heb. 5:1-14", "Proverbs 16:17-33", "Esther 5-6"]
+        },
+        {
+          "date": "2025-08-24",
+          "chapters": ["Luke 20:9-19", "Heb. 6:1-20", "Proverbs 17:1-14", "Esther 7-8"]
+        },
+        {
+          "date": "2025-08-25",
+          "chapters": ["Luke 20:20-26", "Heb. 7:1-28", "Proverbs 17:15-28", "Esther 9-10"]
+        }
+      ]
+    },
+    {
+      "month": "September 2025",
+      "reading_plan": [
+        {
+          "date": "2025-09-01",
+          "chapters": ["Luke 20:27-40", "Heb. 8:1-9", "Proverbs 18", "Isaiah 1-2"]
+        },
+        {
+          "date": "2025-09-02",
+          "chapters": ["Luke 20:41-47", "Heb. 8:10-14", "Proverbs 19:1-14", "Isaiah 3-5"]
+        },
+        {
+          "date": "2025-09-03",
+          "chapters": ["Luke 21:1-19", "Heb. 9:1-15", "Proverbs 19:15-29", "Isaiah 6-8"]
+        },
+        {
+          "date": "2025-09-04",
+          "chapters": ["Luke 21:20-28", "Heb. 9:16-28", "Proverbs 20:1-15", "Isaiah 9-10"]
+        },
+        {
+          "date": "2025-09-05",
+          "chapters": ["Luke 21:29-38", "Heb. 10:1-18", "Proverbs 20:16-30", "Isaiah 11-13"]
+        },
+        {
+          "date": "2025-09-06",
+          "chapters": ["Luke 22:1-13", "Heb. 10:19-39", "Proverbs 21:1-16", "Isaiah 14-16"]
+        },
+        {
+          "date": "2025-09-07",
+          "chapters": ["Luke 22:14-23", "Heb. 11:1-16", "Proverbs 21:17-31", "Isaiah 17-20"]
+        },
+        {
+          "date": "2025-09-08",
+          "chapters": ["Luke 22:24-30", "Heb. 11:17-31", "Proverbs 22:1-16", "Isaiah 21-23"]
+        },
+        {
+          "date": "2025-09-09",
+          "chapters": ["Luke 22:31-38", "Heb. 11:32-40", "Proverbs 22:17-29", "Isaiah 24-26"]
+        },
+        {
+          "date": "2025-09-10",
+          "chapters": ["Luke 22:39-48", "Heb. 12:1-13", "Proverbs 23:1-18", "Isaiah 27-28"]
+        },
+        {
+          "date": "2025-09-11",
+          "chapters": ["Luke 22:49-53", "Heb. 12:14-29", "Proverbs 23:19-35", "Isaiah 29-30"]
+        },
+        {
+          "date": "2025-09-12",
+          "chapters": ["Luke 22:54-62", "Heb. 13:1-8", "Proverbs 24:1-22", "Isaiah 31-33"]
+        },
+        {
+          "date": "2025-09-13",
+          "chapters": ["Luke 22:63-71", "Heb. 13:9-25", "Proverbs 24:23-34", "Isaiah 34-36"]
+        },
+        {
+          "date": "2025-09-14",
+          "chapters": ["Luke 23:1-12", "Heb. 8:7-13", "Proverbs 25:1-14", "Isaiah 37-38"]
+        },
+        {
+          "date": "2025-09-15",
+          "chapters": ["Luke 23:13-25", "Heb. 9:11-10", "Proverbs 25:15-28", "Isaiah 39-41"]
+        },
+        {
+          "date": "2025-09-16",
+          "chapters": ["Luke 23:26-31", "Heb. 9:11-28", "Proverbs 26:1-16", "Isaiah 42-43"]
+        },
+        {
+          "date": "2025-09-17",
+          "chapters": ["Luke 23:32-37", "Heb. 10:1-18", "Proverbs 26:17-28", "Isaiah 44-45"]
+        },
+        {
+          "date": "2025-09-18",
+          "chapters": ["Luke 23:38-43", "Heb. 10:19-39", "Proverbs 27:1-14", "Isaiah 46-48"]
+        },
+        {
+          "date": "2025-09-19",
+          "chapters": ["Luke 23:44-49", "Heb. 11:1-16", "Proverbs 27:15-27", "Isaiah 49-50"]
+        },
+        {
+          "date": "2025-09-20",
+          "chapters": ["Luke 23:50-56", "Heb. 11:17-31", "Proverbs 28:1-14", "Isaiah 51-53"]
+        },
+        {
+          "date": "2025-09-21",
+          "chapters": ["Luke 24:1-12", "Heb. 11:32-40", "Proverbs 28:15-28", "Isaiah 54-55"]
+        },
+        {
+          "date": "2025-09-22",
+          "chapters": ["Luke 24:13-27", "Heb. 12:1-13", "Proverbs 29:1-14", "Isaiah 56-58"]
+        },
+        {
+          "date": "2025-09-23",
+          "chapters": ["Luke 24:28-38", "Heb. 12:14-29", "Proverbs 29:15-27", "Isaiah 59-61"]
+        },
+        {
+          "date": "2025-09-24",
+          "chapters": ["Luke 24:36-44", "Heb. 13:1-8", "Proverbs 30", "Isaiah 62-64"]
+        },
+        {
+          "date": "2025-09-25",
+          "chapters": ["Luke 24:45-53", "Heb. 13:9-25", "Proverbs 31", "Isaiah 65-66"]
+        }
+      ]
+    },
+    {
+      "month": "October 2025",
+      "reading_plan": [
+        {
+          "date": "2025-10-01",
+          "chapters": ["John 1:1-18", "James 1:1-11", "Eccles. 1", "Jer. 1-2"]
+        },
+        {
+          "date": "2025-10-02",
+          "chapters": ["John 1:19-28", "Jam. 1:12-18", "Eccles. 2:1-16", "Jer. 3-4"]
+        },
+        {
+          "date": "2025-10-03",
+          "chapters": ["John 1:29-34", "Jam. 1:19-27", "Eccles. 2:17-26", "Jer. 5-6"]
+        },
+        {
+          "date": "2025-10-04",
+          "chapters": ["John 1:35-42", "Jam. 2:1-13", "Eccles. 3:1-15", "Jer. 7-9"]
+        },
+        {
+          "date": "2025-10-05",
+          "chapters": ["John 1:43-51", "Jam. 2:14-26", "Eccles. 3:16-22", "Jer. 10-11"]
+        },
+        {
+          "date": "2025-10-06",
+          "chapters": ["John 2:1-11", "James 3:1-12", "Eccles. 4", "Jer. 12-13"]
+        },
+        {
+          "date": "2025-10-07",
+          "chapters": ["John 2:12-25", "Jam. 3:13-18", "Eccles. 5", "Jer. 14-15"]
+        },
+        {
+          "date": "2025-10-08",
+          "chapters": ["John 3:1-15", "James 4:1-10", "Eccles. 6", "Jer. 16-18"]
+        },
+        {
+          "date": "2025-10-09",
+          "chapters": ["John 3:16-21", "Jam. 4:11-17", "Eccles. 7:1-14", "Jer. 19-22"]
+        },
+        {
+          "date": "2025-10-10",
+          "chapters": ["John 3:22-36", "James 5:1-12", "Eccles. 7:15-29", "Jer. 23-25"]
+        },
+        {
+          "date": "2025-10-11",
+          "chapters": ["John 4:1-14", "Jam. 5:13-20", "Eccles. 8", "Jer. 26-29"]
+        },
+        {
+          "date": "2025-10-12",
+          "chapters": ["John 4:15-26", "1 Peter 1:1-9", "Eccles. 9", "Jer. 30-31"]
+        },
+        {
+          "date": "2025-10-13",
+          "chapters": ["John 4:27-42", "1 Peter 1:10-12", "Eccles. 10", "Jer. 32-34"]
+        },
+        {
+          "date": "2025-10-14",
+          "chapters": ["John 4:43-54", "1 Pe. 1:13-16", "Eccles. 11", "Jer. 35-38"]
+        },
+        {
+          "date": "2025-10-15",
+          "chapters": ["John 5:1-15", "1 Pe. 1:17-25", "Eccles. 12", "Jer. 39-43"]
+        },
+        {
+          "date": "2025-10-16",
+          "chapters": ["John 5:16-30", "1 Peter 2:1-8", "Song 1", "Jer. 44-46"]
+        },
+        {
+          "date": "2025-10-17",
+          "chapters": ["John 5:31-47", "1 Pe. 2:9-17", "Song 2", "Jer. 47-48"]
+        },
+        {
+          "date": "2025-10-18",
+          "chapters": ["John 6:1-15", "1 Peter 2:18-25", "Song 3", "Jer. 49"]
+        },
+        {
+          "date": "2025-10-19",
+          "chapters": ["John 6:16-24", "1 Pe. 3:1-7", "Song 4:1-7", "Jer. 50"]
+        },
+        {
+          "date": "2025-10-20",
+          "chapters": ["John 6:25-40", "1 Pe. 3:8-12", "Song 4:8-16", "Jer. 51"]
+        },
+        {
+          "date": "2025-10-21",
+          "chapters": ["John 6:41-59", "1 Pe. 3:13-22", "Song 5", "Jer. 52"]
+        },
+        {
+          "date": "2025-10-22",
+          "chapters": ["John 6:60-71", "1 Pe. 4:1-11", "Lam. 1", "Lam. 1"]
+        },
+        {
+          "date": "2025-10-23",
+          "chapters": ["John 7:1-13", "1 Peter 4:12-19", "Song 7", "Lam. 2"]
+        },
+        {
+          "date": "2025-10-24",
+          "chapters": ["John 7:14-24", "1 Peter 5:1-7", "Song 8:1-7", "Lam. 3"]
+        },
+        {
+          "date": "2025-10-25",
+          "chapters": ["John 7:25-36", "1 Pe. 5:8-14", "Song 8:8-14", "Lam. 4-5"]
+        }
+      ]
+    },
+    {
+      "month": "November 2025",
+      "reading_plan": [
+        {
+          "date": "2025-11-01",
+          "chapters": ["John 7:37-44", "2 Pe. 1:1-11", "Job 1", "Ezekiel 1-3"]
+        },
+        {
+          "date": "2025-11-02",
+          "chapters": ["John 7:45-53", "2 Pe. 1:12-21", "Job 2", "Ezekiel 4-8"]
+        },
+        {
+          "date": "2025-11-03",
+          "chapters": ["John 8:1-11", "2 Peter 2:1-9", "Job 3", "Ezekiel 9-12"]
+        },
+        {
+          "date": "2025-11-04",
+          "chapters": ["John 8:12-20", "2 Pe. 2:10-16", "Job 4", "Eze. 13-15"]
+        },
+        {
+          "date": "2025-11-05",
+          "chapters": ["John 8:21-30", "2 Pe. 2:17-22", "Job 5", "Ezekiel 16"]
+        },
+        {
+          "date": "2025-11-06",
+          "chapters": ["John 8:31-47", "2 Peter 3:1-9", "Job 6", "Eze. 17-19"]
+        },
+        {
+          "date": "2025-11-07",
+          "chapters": ["John 8:48-59", "2 Pe. 3:10-18", "Job 7", "Eze. 20-21"]
+        },
+        {
+          "date": "2025-11-08",
+          "chapters": ["John 9:1-12", "1 John 1:1-4", "Job 8", "Ezekiel 22-23"]
+        },
+        {
+          "date": "2025-11-09",
+          "chapters": ["John 9:13-25", "1 Jo. 1:5-10", "Job 9:1-20", "Eze. 24-26"]
+        },
+        {
+          "date": "2025-11-10",
+          "chapters": ["John 9:26-41", "1 Jo. 2:1-11", "Job 9:21-35", "Eze. 27-28"]
+        },
+        {
+          "date": "2025-11-11",
+          "chapters": ["John 10:1-10", "1 Jo. 2:12-17", "Job 10", "Eze. 29-30"]
+        },
+        {
+          "date": "2025-11-12",
+          "chapters": ["John 10:11-21", "1 Jo. 2:18-23", "Job 11", "Eze. 31-32"]
+        },
+        {
+          "date": "2025-11-13",
+          "chapters": ["John 10:22-42", "1 Jo. 2:24-29", "Job 12", "Eze. 33-34"]
+        },
+        {
+          "date": "2025-11-14",
+          "chapters": ["John 11:1-16", "1 Jo. 3:1-10", "Job 13", "Eze. 35-37"]
+        },
+        {
+          "date": "2025-11-15",
+          "chapters": ["John 11:17-37", "1 Jo. 3:11-18", "Job 14", "Ezekiel 38-39"]
+        },
+        {
+          "date": "2025-11-16",
+          "chapters": ["John 11:38-44", "1 Jo. 3:19-24", "Job 15:1-16", "Eze. 40-41"]
+        },
+        {
+          "date": "2025-11-17",
+          "chapters": ["John 11:45-57", "1 Jo. 4:1-6", "Job 15:17-35", "Eze. 42-44"]
+        },
+        {
+          "date": "2025-11-18",
+          "chapters": ["John 12:1-11", "1 Jo. 4:7-21", "Job 16", "Eze. 45-47"]
+        },
+        {
+          "date": "2025-11-19",
+          "chapters": ["John 12:12-19", "1 Jo. 5:1-12", "Job 17", "Ezekiel 48"]
+        },
+        {
+          "date": "2025-11-20",
+          "chapters": ["John 12:20-36", "1 Jo. 5:13-21", "Job 18", "Daniel 1-2"]
+        },
+        {
+          "date": "2025-11-21",
+          "chapters": ["John 12:37-50", "2 John 1:1-13", "Job 19", "Daniel 3-4"]
+        },
+        {
+          "date": "2025-11-22",
+          "chapters": ["John 13:1-11", "3 John 1:1-14", "Job 20", "Daniel 5-6"]
+        },
+        {
+          "date": "2025-11-23",
+          "chapters": ["John 13:12-17", "Jude 1:1-7", "Job 21:1-21", "Daniel 7-8"]
+        },
+        {
+          "date": "2025-11-24",
+          "chapters": ["John 13:18-30", "Jude 1:8-16", "Job 21:22-34", "Daniel 9"]
+        },
+        {
+          "date": "2025-11-25",
+          "chapters": ["John 13:31-38", "Jude 1:17-25", "Job 22", "Daniel 10-12"]
+        }
+      ]
+    },
+    {
+      "month": "December 2025",
+      "reading_plan": [
+        {
+          "date": "2025-12-01",
+          "chapters": ["John 14:1-11", "Rev. 1:1-8", "Job 23", "Hosea 1-3"]
+        },
+        {
+          "date": "2025-12-02",
+          "chapters": ["John 14:12-21", "Rev. 1:9-20", "Job 24", "Hosea 4-6"]
+        },
+        {
+          "date": "2025-12-03",
+          "chapters": ["John 14:22-31", "Rev. 2:1-17", "Job 25-26", "Hosea 7-8"]
+        },
+        {
+          "date": "2025-12-04",
+          "chapters": ["John 15:1-8", "Rev. 2:18-29", "Job 27", "Hosea 9-12"]
+        },
+        {
+          "date": "2025-12-05",
+          "chapters": ["John 15:9-17", "Rev. 3:1-13", "Job 28", "Hosea 13-14"]
+        },
+        {
+          "date": "2025-12-06",
+          "chapters": ["John 15:18-27", "Rev. 3:14-22", "Job 29", "Joel 1"]
+        },
+        {
+
+          "date": "2025-12-07",
+          "chapters": ["John 16:1-11", "Revelation 4", "Job 30", "Joel 2-3"]
+        },
+        {
+          "date": "2025-12-08",
+          "chapters": ["John 16:12-24", "Revelation 5", "Job 31:1-23", "Amos 1-2"]
+        },
+        {
+          "date": "2025-12-09",
+          "chapters": ["John 16:25-33", "Revelation 6", "Job 31:24-40", "Amos 3-4"]
+        },
+        {
+          "date": "2025-12-10",
+          "chapters": ["John 17:1-5", "Revelation 7", "Job 32", "Amos 5-6"]
+        },
+        {
+          "date": "2025-12-11",
+          "chapters": ["John 17:6-19", "Revelation 8", "Job 33:1-31", "Amos 7-9"]
+        },
+        {
+          "date": "2025-12-12",
+          "chapters": ["John 17:20-26", "Revelation 9", "Job 33:32-33", "Obadiah 1"]
+        },
+        {
+          "date": "2025-12-13",
+          "chapters": ["John 18:1-18", "Revelation 10", "Jonah 1:1-4:0", "Jonah 1-4"]
+        },
+        {
+          "date": "2025-12-14",
+          "chapters": ["John 18:19-27", "Rev. 11", "Job 34:1-37", "Micah 1-3"]
+        },
+        {
+          "date": "2025-12-15",
+          "chapters": ["John 18:28-40", "Rev. 12", "Job 35", "Micah 4-5"]
+        },
+        {
+          "date": "2025-12-16",
+          "chapters": ["John 19:1-16", "Revelation 13", "Job 36:1-15", "Micah 6-7"]
+        },
+        {
+          "date": "2025-12-17",
+          "chapters": ["John 19:17-27", "Rev. 14", "Job 36:16-33", "Nahum 1-3"]
+        },
+        {
+          "date": "2025-12-18",
+          "chapters": ["John 19:28-37", "Rev. 15", "Job 37", "Hab. 1-3"]
+        },
+        {
+          "date": "2025-12-19",
+          "chapters": ["John 19:38-42", "Rev. 16", "Job 38:1-21", "Zeph. 1-2"]
+        },
+        {
+          "date": "2025-12-20",
+          "chapters":[]
+        }
+        ]
+    }
+
+]

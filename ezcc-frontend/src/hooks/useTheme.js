@@ -1,27 +1,17 @@
-import { useState, useEffect } from 'react';
+import { create } from 'zustand';
 
-export const useTheme = () => {
-  const [theme, setTheme] = useState(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) return savedTheme;
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  });
-
-  useEffect(() => {
-    const root = window.document.documentElement;
-    
-    if (theme === 'dark') {
-      root.classList.add('dark');
-    } else {
-      root.classList.remove('dark');
-    }
-    
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
-
-  return { theme, toggleTheme };
-};
+export const useThemeStore = create((set) => ({
+  theme: localStorage.getItem('theme') || 'light',
+  toggleTheme: () => set((state) => {
+    const newTheme = state.theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
+    return { theme: newTheme };
+  }),
+  // Call this once in App.jsx to sync on load
+  initializeTheme: () => {
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    set({ theme });
+  }
+}));
