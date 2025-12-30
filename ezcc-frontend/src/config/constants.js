@@ -13,11 +13,13 @@ export const STORAGE_KEYS = {
 // API Endpoints
 export const API_ENDPOINTS = {
   // Auth
-  ADMIN_CREATE: '/admin/create',        // NEW: Admin signup
-  ADMIN_LOGIN: '/admin/login',
-  ADMIN_LOGOUT: '/admin/logout',
-  ADMIN_ME: '/admin/me',
-  ADMIN_CHANGE_PASSWORD: '/admin/password',
+  SIGNUP: '/auth/signup',
+  LOGIN: '/auth/login',
+  LOGOUT: '/auth/logout',
+  ME: '/auth/me',
+  
+  // Branches (You'll need this for the signup dropdown)
+  BRANCHES: '/branches',
   
   // Users
   USERS: '/users',
@@ -76,6 +78,7 @@ export const EVENT_CROSS_BRANCH_STATUS = {
   APPROVED: 'approved',
   REJECTED: 'rejected',
 };
+
 
 // Password Validation Rules
 export const PASSWORD_RULES = {

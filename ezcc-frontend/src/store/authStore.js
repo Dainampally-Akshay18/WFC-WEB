@@ -1,140 +1,71 @@
 import { create } from 'zustand';
-import { authService } from '@services/authService';
+import { authService } from '../services/authService';
 import toast from 'react-hot-toast';
 
-/**
- * Authentication store
- */
-export const useAuthStore = create((set, get) => ({
-  // State
-  admin: authService.getStoredUser(),
+export const useAuthStore = create((set) => ({
+  user: authService.getStoredUser(),
   isAuthenticated: authService.isAuthenticated(),
   isLoading: false,
   error: null,
 
-  /**
-   * Signup action
-   * @param {Object} signupData - Email, password, display_name
-   */
   signup: async (signupData) => {
     set({ isLoading: true, error: null });
-    
     try {
-      const admin = await authService.signup(signupData);
-      
-      set({
-        isLoading: false,
-        error: null,
-      });
-
-      toast.success('Admin account created successfully! Please login.');
-      return { success: true, admin };
+      const result = await authService.signup(signupData);
+      set({ isLoading: false });
+      toast.success('Registration successful! Please wait for admin approval.');
+      return { success: true, data: result };
     } catch (error) {
-      const errorMessage = error.response?.data?.detail || 'Signup failed';
-      
-      set({
-        isLoading: false,
-        error: errorMessage,
-      });
-
-      toast.error(errorMessage);
-      return { success: false, error: errorMessage };
+      const message = error.response?.data?.detail || 'Signup failed';
+      set({ isLoading: false, error: message });
+      toast.error(message);
+      return { success: false, error: message };
     }
   },
 
-  /**
-   * Login action
-   * @param {Object} credentials - Email and password
-   */
   login: async (credentials) => {
     set({ isLoading: true, error: null });
-    
     try {
-      const { user } = await authService.login(credentials);
+      await authService.login(credentials);
+      const userData = await authService.getCurrentUser();
       
       set({
-        admin: user,
+        user: userData,
         isAuthenticated: true,
         isLoading: false,
-        error: null,
       });
 
-      toast.success('Login successful!');
+      toast.success(`Welcome back, ${userData.full_name}!`);
       return { success: true };
     } catch (error) {
-      const errorMessage = error.response?.data?.detail || 'Login failed';
-      
-      set({
-        admin: null,
-        isAuthenticated: false,
-        isLoading: false,
-        error: errorMessage,
-      });
-
-      return { success: false, error: errorMessage };
+      const message = error.response?.data?.detail || 'Login failed';
+      set({ user: null, isAuthenticated: false, isLoading: false, error: message });
+      toast.error(message);
+      return { success: false, error: message };
     }
   },
 
-  /**
-   * Logout action
-   */
   logout: async () => {
     set({ isLoading: true });
-
-    try {
-      await authService.logout();
-      
-      set({
-        admin: null,
-        isAuthenticated: false,
-        isLoading: false,
-        error: null,
-      });
-
-      toast.success('Logged out successfully');
-    } catch (error) {
-      console.error('Logout error:', error);
-      
-      // Still clear state even if API call fails
-      set({
-        admin: null,
-        isAuthenticated: false,
-        isLoading: false,
-        error: null,
-      });
-    }
+    await authService.logout();
+    set({
+      user: null,
+      isAuthenticated: false,
+      isLoading: false,
+      error: null,
+    });
+    toast.success('Logged out successfully');
   },
 
-  /**
-   * Initialize auth state from storage
-   */
   initialize: async () => {
-    const isAuth = authService.isAuthenticated();
-    const storedUser = authService.getStoredUser();
-
-    if (isAuth && storedUser) {
-      set({
-        admin: storedUser,
-        isAuthenticated: true,
-      });
-
-      // Optionally refresh user data
+    if (authService.isAuthenticated()) {
       try {
-        const freshUserData = await authService.getCurrentUser();
-        set({ admin: freshUserData });
+        const user = await authService.getCurrentUser();
+        set({ user, isAuthenticated: true });
       } catch (error) {
-        console.error('Failed to refresh user data:', error);
+        authService.logout();
+        set({ user: null, isAuthenticated: false });
       }
-    } else {
-      set({
-        admin: null,
-        isAuthenticated: false,
-      });
     }
-  },
-
-  /**
-   * Clear error
-   */
-  clearError: () => set({ error: null }),
+  }
 }));
