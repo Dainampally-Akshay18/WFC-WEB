@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { authService } from '../services/authService';
+import { authService } from '../services/useAuthService';
 import toast from 'react-hot-toast';
 
 export const useAuthStore = create((set) => ({
