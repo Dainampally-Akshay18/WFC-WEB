@@ -258,7 +258,7 @@ const LandingPage = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-slate-900 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1600&q=80" 
+            src="https://res.cloudinary.com/dunrzq7tv/image/upload/v1767487889/Gemini_Generated_Image_o2eti5o2eti5o2et_znnjuj.png" 
             alt="Church"
             className="w-full h-full object-cover scale-110"
           />
@@ -285,7 +285,7 @@ const LandingPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Welcome Home EZCC 
+              Welcome Home NEZCC 
             </motion.h1>
             
             <motion.p 
