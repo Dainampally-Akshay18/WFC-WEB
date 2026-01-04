@@ -258,7 +258,7 @@ const LandingPage = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-slate-900 z-10" />
           <img 
-            src="https://images.unsplash.com/photo-1438232992991-995b7058bbb3?w=1600&q=80" 
+            src="https://res.cloudinary.com/dunrzq7tv/image/upload/v1767488340/Gemini_Generated_Image_y4k5r3y4k5r3y4k5_ds8chf.png" 
             alt="Church"
             className="w-full h-full object-cover scale-110"
           />
