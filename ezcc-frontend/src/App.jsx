@@ -5,7 +5,7 @@ import LandingPage from './pages/Landing/LandingPage';
 import Login from './pages/auth/Login';
 import Signup from './pages/auth/Signup';
 import Approval from './pages/approval/Approval';
-import Home from './pages/home/home';
+import Home from './pages/home/Home';
 
 import Navbar from './components/Navbar';
 import Sidebar from './components/Sidebar';
